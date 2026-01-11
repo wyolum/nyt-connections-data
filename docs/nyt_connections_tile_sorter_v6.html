@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connections Tile Sorter – Source Toggle</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #fafafa;
+    }
+
+    #controlSection {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #controlSection h2 {
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+
+    .control-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .control-row label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    #dateInput, #sourceSelect {
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #fff;
+    }
+
+    #dateInput:hover, #sourceSelect:hover {
+      border-color: #007bff;
+    }
+
+    #status {
+      font-size: 14px;
+      color: #666;
+      min-height: 20px;
+    }
+
+    #status.loading { color: #007bff; }
+    #status.error { color: #dc3545; }
+    #status.success { color: #28a745; }
+
+    #puzzleInfo {
+      font-size: 12px;
+      color: #999;
+      margin-top: 5px;
+      line-height: 1.35;
+    }
+
+    .grid {
+      width: 95%;
+      max-width: 380px;
+      margin: 20px auto;
+    }
+
+    .row-container {
+      display: grid;
+      grid-template-columns: 0.25fr repeat(4, 1fr) 0.25fr;
+      grid-gap: 5px;
+      margin-bottom: 5px;
+      transition: transform 300ms ease;
+    }
+
+    .row-decoration {
+      background: transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .row-decoration:hover {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+
+    .row-decoration.selected-row {
+      outline: 3px solid #ff6b00;
+      outline-offset: 2px;
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    }
+
+    .tile {
+      background: #fff;
+      border: 1px solid #000;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      padding: 5px;
+      font-size: 20px;
+      text-align: center;
+      overflow: hidden;
+      white-space: pre-line;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform .3s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .tile.selected {
+      outline: 3px solid blue;
+      box-shadow: 0 2px 6px rgba(0, 0, 255, 0.3);
+    }
+
+    .tile:hover { transform: scale(1.02); }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+    }
+
+    button:hover { background: #f0f0f0; }
+
+    @media (max-width: 480px) {
+      .grid { width: 95%; }
+      .tile { font-size: 4vw; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="controlSection">
+    <h2>🧩 NYT Connections Tile Sorter</h2>
+
+    <div class="control-row">
+      <label for="dateInput">Select Date:</label>
+      <input type="date" id="dateInput" />
+    </div>
+
+    <div class="control-row">
+      <label for="sourceSelect">Source:</label>
+      <select id="sourceSelect">
+        <option value="wyolum" selected>Wyolum (board order)</option>
+        <option value="solution">Solution dataset (groups)</option>
+      </select>
+    </div>
+
+    <div id="status"></div>
+    <div id="puzzleInfo"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="buttons">
+    <button id="shuffle">Shuffle</button>
+  </div>
+
+  <script>
+    /* ---------- CONFIGURATION ---------- */
+
+    // Primary: your GitHub Pages feed (board order)
+    // Replace repo name if different.
+    const WYOLUM_BASE = 'https://wyolum.github.io/nyt-connections-data/data';
+    const WYOLUM_LATEST_URL = `${WYOLUM_BASE}/latest.json`;
+    const WYOLUM_BY_DATE_URL = (ymd) => `${WYOLUM_BASE}/${ymd}.json`;
+
+    // Secondary: solution/group dataset (kept for later upgrades)
+    const SOLUTION_DATA_URL = 'https://raw.githubusercontent.com/Eyefyre/NYT-Connections-Answers/main/connections.json';
+
+    const rowColors = ["purple", "blue", "green", "yellow"];
+
+    /* ---------- STATE ---------- */
+    const grid = document.getElementById('grid');
+    const dateInput = document.getElementById('dateInput');
+    const sourceSelect = document.getElementById('sourceSelect');
+    const statusEl = document.getElementById('status');
+    const puzzleInfoEl = document.getElementById('puzzleInfo');
+
+    let currentWords = [
+      'one', 'two', 'three', 'four',
+      'five', 'six', 'seven', 'eight',
+      'nine', 'ten', 'eleven', 'twelve',
+      'thirteen', 'fourteen', 'fifteen', 'sixteen'
+    ];
+
+    let selectedTile = null;
+    let selectedRow = null;
+
+    // Cache for solution dataset only
+    let solutionPuzzles = null;
+
+    /* ---------- INITIALIZATION ---------- */
+    function init() {
+      // Set date input to today (local time)
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      dateInput.value = `${year}-${month}-${day}`;
+
+      // Load today's puzzle automatically
+      loadPuzzle();
+
+      // Event listeners
+      dateInput.addEventListener('change', loadPuzzle);
+      sourceSelect.addEventListener('change', loadPuzzle);
+
+      document.getElementById('shuffle').onclick = () => {
+        currentWords.sort(() => Math.random() - 0.5);
+        renderGrid(currentWords);
+        selectedRow = null;
+        selectedTile = null;
+      };
+    }
+
+    /* ---------- DATA FETCHING ---------- */
+
+    async function fetchWyolumPuzzle(selectedDate) {
+      // Prefer date-specific file; if missing, fall back to latest.json
+      const tryUrls = [
+        WYOLUM_BY_DATE_URL(selectedDate),
+        WYOLUM_LATEST_URL
+      ];
+
+      for (const url of tryUrls) {
+        const resp = await fetch(url, { cache: 'no-store' });
+        if (!resp.ok) continue;
+        const payload = await resp.json();
+
+        if (payload && Array.isArray(payload.tiles) && payload.tiles.length === 16) {
+          return { payload, urlUsed: url };
+        }
+      }
+
+      throw new Error('Wyolum feed unavailable for this date (and latest.json unavailable).');
+    }
+
+    async function fetchSolutionPuzzle(selectedDate) {
+      if (!solutionPuzzles) {
+        const response = await fetch(SOLUTION_DATA_URL);
+        if (!response.ok) throw new Error('Failed to fetch solution dataset');
+        solutionPuzzles = await response.json();
+      }
+      const puzzle = solutionPuzzles.find(p => p.date === selectedDate);
+      if (!puzzle) return null;
+      return puzzle;
+    }
+
+    async function loadPuzzle() {
+      const selectedDate = dateInput.value;
+      const source = sourceSelect.value;
+
+      if (!selectedDate) {
+        setStatus('Please select a date', 'error');
+        return;
+      }
+
+      setStatus('Loading puzzle...', 'loading');
+      dateInput.disabled = true;
+      sourceSelect.disabled = true;
+
+      try {
+        if (source === 'wyolum') {
+          const { payload, urlUsed } = await fetchWyolumPuzzle(selectedDate);
+
+          // Preserve editorial board order exactly
+          currentWords = payload.tiles.slice();
+          renderGrid(currentWords);
+
+          setStatus('Puzzle loaded successfully!', 'success');
+
+          const mismatch = payload.date && payload.date !== selectedDate;
+          const which = (urlUsed === WYOLUM_LATEST_URL) ? 'latest.json' : `${selectedDate}.json`;
+
+          puzzleInfoEl.textContent =
+            `Source: Wyolum feed (${which})` +
+            (payload.date ? ` • Data date: ${payload.date}` : '') +
+            (mismatch ? ` • Note: selected ${selectedDate} but loaded ${payload.date}` : '');
+
+        } else {
+          const puzzle = await fetchSolutionPuzzle(selectedDate);
+          if (!puzzle) {
+            setStatus(`No puzzle found for ${selectedDate} in solution dataset`, 'error');
+            return;
+          }
+
+          // Extract all words from the 4 groups.
+          // This is solution/group order as stored (not NYT board layout).
+          const words = [];
+          puzzle.answers.forEach(group => words.push(...group.members));
+
+          if (words.length !== 16) {
+            throw new Error(`Expected 16 words, got ${words.length}`);
+          }
+
+          // IMPORTANT: no initial randomization here
+          currentWords = words.slice();
+          renderGrid(currentWords);
+
+          setStatus('Puzzle loaded successfully!', 'success');
+          puzzleInfoEl.textContent = `Source: Solution dataset • Puzzle #${puzzle.id} • ${puzzle.date}`;
+        }
+
+        // Clear success message after 2 seconds
+        setTimeout(() => {
+          if (statusEl.classList.contains('success')) setStatus('', '');
+        }, 2000);
+
+      } catch (error) {
+        console.error('Error loading puzzle:', error);
+        setStatus(`Error: ${error.message}`, 'error');
+      } finally {
+        dateInput.disabled = false;
+        sourceSelect.disabled = false;
+      }
+    }
+
+    function setStatus(message, type) {
+      statusEl.textContent = message;
+      statusEl.className = type;
+    }
+
+    /* ---------- GRID RENDERING ---------- */
+    function determineFontSize(text) {
+      const longest = text.split(/\s+/).reduce((m, w) => Math.max(m, w.length), 0);
+      if (longest >= 12) return '8px';
+      if (longest >= 10) return '12px';
+      if (longest >= 8) return '14px';
+      if (longest === 6) return '18px';
+      return '20px';
+    }
+
+    function renderGrid(words) {
+      grid.innerHTML = '';
+      for (let r = 0; r < 4; r++) {
+        const row = document.createElement('div');
+        row.className = 'row-container';
+
+        const left = document.createElement('div');
+        left.className = 'row-decoration';
+        left.style.backgroundColor = rowColors[r];
+        left.dataset.rowIndex = r;
+        setupRowTapHandlers(left, row);
+        row.appendChild(left);
+
+        for (let c = 0; c < 4; c++) {
+          const idx = r * 4 + c;
+          const tile = document.createElement('div');
+          tile.className = 'tile';
+          tile.dataset.index = idx;
+
+          const raw = (words[idx] || '').toUpperCase();
+          tile.innerText = raw.includes(' ') ? raw.replace(/ /g, '\n') : raw;
+          tile.style.fontSize = determineFontSize(raw);
+          tile.onclick = onTileClick;
+
+          // Long-press edit
+          let pressTimer;
+          tile.addEventListener('pointerdown', e => {
+            e.preventDefault();
+            pressTimer = setTimeout(() => editTile(tile), 600);
+          });
+          ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev =>
+            tile.addEventListener(ev, () => clearTimeout(pressTimer))
+          );
+
+          row.appendChild(tile);
+        }
+
+        const right = document.createElement('div');
+        right.className = 'row-decoration';
+        right.style.backgroundColor = rowColors[r];
+        right.dataset.rowIndex = r;
+        setupRowTapHandlers(right, row);
+        row.appendChild(right);
+
+        grid.appendChild(row);
+      }
+    }
+
+    /* ---------- TILE INTERACTION ---------- */
+    function animateSwap(tile1, tile2) {
+      const r1 = tile1.getBoundingClientRect();
+      const r2 = tile2.getBoundingClientRect();
+      const dx = r2.left - r1.left;
+      const dy = r2.top - r1.top;
+
+      tile1.style.transition = tile2.style.transition = 'transform 300ms ease';
+      tile1.style.transform = `translate(${dx}px,${dy}px)`;
+      tile2.style.transform = `translate(${-dx}px,${-dy}px)`;
+
+      setTimeout(() => {
+        // Swap DOM positions
+        const ph = document.createElement('div');
+        tile1.parentNode.insertBefore(ph, tile1);
+        tile2.parentNode.insertBefore(tile1, tile2);
+        ph.parentNode.insertBefore(tile2, ph);
+        ph.remove();
+
+        // Update dataset indexes & currentWords
+        const idx1 = parseInt(tile1.dataset.index, 10);
+        const idx2 = parseInt(tile2.dataset.index, 10);
+        [currentWords[idx1], currentWords[idx2]] = [currentWords[idx2], currentWords[idx1]];
+        [tile1.dataset.index, tile2.dataset.index] = [tile2.dataset.index, tile1.dataset.index];
+
+        // Clear transforms
+        tile1.style.transition = tile2.style.transition = '';
+        tile1.style.transform = tile2.style.transform = '';
+      }, 300);
+    }
+
+    function onTileClick() {
+      if (!selectedTile) {
+        selectedTile = this;
+        this.classList.add('selected');
+        return;
+      }
+      if (selectedTile === this) {
+        this.classList.remove('selected');
+        selectedTile = null;
+        return;
+      }
+      animateSwap(selectedTile, this);
+      selectedTile.classList.remove('selected');
+      selectedTile = null;
+    }
+
+    function editTile(tile) {
+      const idx = parseInt(tile.dataset.index, 10);
+      const current = currentWords[idx] || '';
+      const updated = prompt('Edit tile text:', current);
+      if (updated !== null && updated.trim() !== '') {
+        currentWords[idx] = updated.trim();
+        renderGrid(currentWords);
+        selectedTile = null;
+        selectedRow = null;
+      }
+    }
+
+    /* ---------- ROW TAP-TO-SWAP ---------- */
+    function setupRowTapHandlers(decoration, rowElement) {
+      decoration.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        // If no row selected, select this one
+        if (!selectedRow) {
+          selectedRow = rowElement;
+          rowElement.querySelectorAll('.row-decoration').forEach(d => d.classList.add('selected-row'));
+          return;
+        }
+
+        // If clicking the same row, deselect
+        if (selectedRow === rowElement) {
+          rowElement.querySelectorAll('.row-decoration').forEach(d => d.classList.remove('selected-row'));
+          selectedRow = null;
+          return;
+        }
+
+        // Swap the two rows
+        swapRows(selectedRow, rowElement);
+        selectedRow.querySelectorAll('.row-decoration').forEach(d => d.classList.remove('selected-row'));
+        selectedRow = null;
+        selectedTile = null;
+      });
+    }
+
+    function swapRows(row1, row2) {
+      const tiles1 = Array.from(row1.querySelectorAll('.tile'));
+      const tiles2 = Array.from(row2.querySelectorAll('.tile'));
+
+      const indices1 = tiles1.map(t => parseInt(t.dataset.index, 10));
+      const indices2 = tiles2.map(t => parseInt(t.dataset.index, 10));
+
+      const r1 = row1.getBoundingClientRect();
+      const r2 = row2.getBoundingClientRect();
+      const dy = r2.top - r1.top;
+
+      row1.style.transition = row2.style.transition = 'transform 300ms ease';
+      row1.style.transform = `translateY(${dy}px)`;
+      row2.style.transform = `translateY(${-dy}px)`;
+
+      setTimeout(() => {
+        for (let i = 0; i < 4; i++) {
+          [currentWords[indices1[i]], currentWords[indices2[i]]] =
+            [currentWords[indices2[i]], currentWords[indices1[i]]];
+        }
+        renderGrid(currentWords);
+      }, 300);
+    }
+
+    /* ---------- START ---------- */
+    renderGrid(currentWords);
+    init();
+  </script>
+</body>
+
+</html>
