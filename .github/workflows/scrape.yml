@@ -2,7 +2,7 @@ name: Scrape NYT Connections
 
 on:
   schedule:
-    - cron: "20 10 * * *" # 10:20 UTC daily (05:20 ET). Adjust as desired.
+    - cron: "1 8 * * *" # 03:01 EST (08:01 UTC) daily.
   workflow_dispatch: {}
 
 permissions:
