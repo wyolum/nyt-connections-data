@@ -9,6 +9,8 @@ The project is configured to serve the scraped data and a tile sorter tool via G
 
 **Live Tile Sorter:** [https://wyolum.github.io/nyt-connections-data/nyt_connections_tile_sorter_v6.html](https://wyolum.github.io/nyt-connections-data/nyt_connections_tile_sorter_v6.html)
 
+**Original Puzzle:** [https://www.nytimes.com/games/connections](https://www.nytimes.com/games/connections)
+
 **Data Index:** [https://wyolum.github.io/nyt-connections-data/](https://wyolum.github.io/nyt-connections-data/)
 
 > [!NOTE]
