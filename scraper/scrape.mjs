@@ -55,30 +55,40 @@ async function main() {
     });
 
     console.log(`Navigating to ${NYT_URL}...`);
-    await page.goto(NYT_URL, { waitUntil: "domcontentloaded", timeout: 90000 });
-    await page.waitForTimeout(5000); // Wait for potential redirects/overlays
+    try {
+        await page.goto(NYT_URL, { waitUntil: "domcontentloaded", timeout: 90000 });
+        console.log("Page loaded (domcontentloaded).");
+        await page.waitForTimeout(5000);
+        console.log("Wait finished.");
 
-    // Grab candidate texts in page order.
-    const tiles = await extractTilesFromDOM(page);
-    console.log(`Extracted ${tiles.length} tiles.`);
+        // Grab candidate texts in page order.
+        const tiles = await extractTilesFromDOM(page);
+        console.log(`Extracted ${tiles.length} tiles:`, tiles);
 
-    await browser.close();
+        if (tiles.length !== 16) {
+            throw new Error(`Failed to extract 16 tiles; got ${tiles.length}. Found: ${tiles.join(', ')}`);
+        }
 
-    if (tiles.length !== 16) {
-        throw new Error(`Failed to extract 16 tiles; got ${tiles.length}. Found: ${tiles.join(', ')}`);
+        const payload = {
+            date,
+            tiles,
+            fetched_at: new Date().toISOString(),
+            source: NYT_URL
+        };
+
+        // Write dated + latest
+        writeJsonAtomic(path.join(OUT_DIR, `${date}.json`), payload);
+        writeJsonAtomic(path.join(OUT_DIR, "latest.json"), payload);
+        console.log(`Data written successfully.`);
+    } catch (err) {
+        console.error("Scrape failed:", err.message);
+        await page.screenshot({ path: "failure.png", fullPage: true });
+        console.log("Failure screenshot saved to failure.png");
+        throw err;
+    } finally {
+        await browser.close();
+        console.log("Browser closed.");
     }
-
-    const payload = {
-        date,
-        tiles,
-        fetched_at: new Date().toISOString(),
-        source: NYT_URL
-    };
-
-    // Write dated + latest
-    writeJsonAtomic(path.join(OUT_DIR, `${date}.json`), payload);
-    writeJsonAtomic(path.join(OUT_DIR, "latest.json"), payload);
-    console.log(`Data written to ${path.join(OUT_DIR, "latest.json")}`);
 }
 
 main().catch((err) => {
