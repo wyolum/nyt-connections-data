@@ -1,0 +1,23 @@
+{
+  "date": "2026-01-11",
+  "tiles": [
+    "BOOK",
+    "BAR",
+    "GRAM",
+    "SPLIT",
+    "TUBE",
+    "WEB",
+    "JET",
+    "APP",
+    "MOLE",
+    "STRAW",
+    "DESKTOP",
+    "PIPE",
+    "HOSE",
+    "DIP",
+    "VOLT",
+    "MOBILE"
+  ],
+  "fetched_at": "2026-01-11T00:35:34.869Z",
+  "source": "https://www.nytimes.com/games/connections"
+}
