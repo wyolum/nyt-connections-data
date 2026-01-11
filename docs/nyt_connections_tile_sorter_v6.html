@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Connections Tile Sorter – Source Toggle</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: sans-serif;
@@ -43,7 +45,8 @@
       color: #333;
     }
 
-    #dateInput, #sourceSelect {
+    #dateInput,
+    #sourceSelect {
       padding: 8px 12px;
       font-size: 14px;
       border: 1px solid #ccc;
@@ -52,7 +55,8 @@
       background: #fff;
     }
 
-    #dateInput:hover, #sourceSelect:hover {
+    #dateInput:hover,
+    #sourceSelect:hover {
       border-color: #007bff;
     }
 
@@ -62,9 +66,17 @@
       min-height: 20px;
     }
 
-    #status.loading { color: #007bff; }
-    #status.error { color: #dc3545; }
-    #status.success { color: #28a745; }
+    #status.loading {
+      color: #007bff;
+    }
+
+    #status.error {
+      color: #dc3545;
+    }
+
+    #status.success {
+      color: #28a745;
+    }
 
     #puzzleInfo {
       font-size: 12px;
@@ -138,7 +150,9 @@
       box-shadow: 0 2px 6px rgba(0, 0, 255, 0.3);
     }
 
-    .tile:hover { transform: scale(1.02); }
+    .tile:hover {
+      transform: scale(1.02);
+    }
 
     .buttons {
       text-align: center;
@@ -159,11 +173,18 @@
       -moz-user-select: none;
     }
 
-    button:hover { background: #f0f0f0; }
+    button:hover {
+      background: #f0f0f0;
+    }
 
     @media (max-width: 480px) {
-      .grid { width: 95%; }
-      .tile { font-size: 4vw; }
+      .grid {
+        width: 95%;
+      }
+
+      .tile {
+        font-size: 4vw;
+      }
     }
   </style>
 </head>
@@ -180,8 +201,8 @@
     <div class="control-row">
       <label for="sourceSelect">Source:</label>
       <select id="sourceSelect">
-        <option value="wyolum" selected>Wyolum (board order)</option>
-        <option value="solution">Solution dataset (groups)</option>
+        <option value="wyolum" selected>Puzzle</option>
+        <option value="solution">Solution</option>
       </select>
     </div>
 
@@ -303,19 +324,19 @@
         if (source === 'wyolum') {
           const { payload, urlUsed } = await fetchWyolumPuzzle(selectedDate);
 
+          // Check if the data date matches the selected date
+          if (payload.date && payload.date !== selectedDate) {
+            setStatus(`Data not available for ${selectedDate} (loaded ${payload.date} instead)`, 'error');
+            puzzleInfoEl.textContent = `Note: requested ${selectedDate} but only ${payload.date} was available.`;
+            // We still render the tiles, but the status shows the error/warning
+          } else {
+            setStatus('Puzzle loaded successfully!', 'success');
+            puzzleInfoEl.textContent = `Source: Puzzle feed • Date: ${payload.date || selectedDate}`;
+          }
+
           // Preserve editorial board order exactly
           currentWords = payload.tiles.slice();
           renderGrid(currentWords);
-
-          setStatus('Puzzle loaded successfully!', 'success');
-
-          const mismatch = payload.date && payload.date !== selectedDate;
-          const which = (urlUsed === WYOLUM_LATEST_URL) ? 'latest.json' : `${selectedDate}.json`;
-
-          puzzleInfoEl.textContent =
-            `Source: Wyolum feed (${which})` +
-            (payload.date ? ` • Data date: ${payload.date}` : '') +
-            (mismatch ? ` • Note: selected ${selectedDate} but loaded ${payload.date}` : '');
 
         } else {
           const puzzle = await fetchSolutionPuzzle(selectedDate);
