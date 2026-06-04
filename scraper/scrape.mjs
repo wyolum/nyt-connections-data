@@ -27,19 +27,26 @@ function writeJsonAtomic(filePath, obj) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function extractTilesFromDOM(page) {
-    // Dismiss the splash screen if present so the grid renders.
-    const playButton = page.getByRole("button", { name: /Play/i });
-    if (await playButton.count().then((n) => n > 0 && playButton.first().isVisible()).catch(() => false)) {
-        console.log("Clicking 'Play' button...");
-        await playButton.first().click().catch(() => {});
+    const tiles = page.locator(TILE_SELECTOR);
+    // The board renders only after the "Play" splash is dismissed. Clicking too
+    // early (before React attaches the handler) is a silent no-op, so poll: click
+    // Play whenever it's visible and the board hasn't appeared yet. This absorbs
+    // any hydration timing instead of betting on a single fixed delay.
+    const playButton = page.getByTestId("moment-btn-play");
+    for (let i = 0; i < 20; i++) {
+        if ((await tiles.count()) === 16) break;
+        if (await playButton.isVisible().catch(() => false)) {
+            console.log("Clicking 'Play' button...");
+            await playButton.click().catch(() => {});
+        }
+        await page.waitForTimeout(1500);
     }
 
-    // Wait for the grid to actually be present rather than guessing with a fixed delay.
-    // This is the main flakiness fix: slow loads now wait, they don't fail.
+    // Final guard: make sure all 16 tiles are actually present before reading.
     await page.waitForFunction(
         (sel) => document.querySelectorAll(sel).length === 16,
         TILE_SELECTOR,
-        { timeout: 30000 }
+        { timeout: 15000 }
     );
 
     return await page.evaluate((sel) => {
