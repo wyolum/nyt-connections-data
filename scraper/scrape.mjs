@@ -24,6 +24,31 @@ function writeJsonAtomic(filePath, obj) {
     fs.renameSync(tmp, filePath);
 }
 
+// Write only when the meaningful content (date + tiles) differs from what's on
+// disk, so an unchanged puzzle doesn't churn the file just because `fetched_at`
+// is a fresh timestamp. Returns true if it wrote. Keeps every run idempotent for
+// both the Mac mini and the GitHub Action.
+function writeIfChanged(filePath, payload) {
+    if (fs.existsSync(filePath)) {
+        try {
+            const existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
+            const same =
+                existing.date === payload.date &&
+                Array.isArray(existing.tiles) &&
+                existing.tiles.length === payload.tiles.length &&
+                existing.tiles.every((t, i) => t === payload.tiles[i]);
+            if (same) {
+                console.log(`Unchanged, skipping write: ${filePath}`);
+                return false;
+            }
+        } catch {
+            // Corrupt/unreadable existing file — fall through and overwrite.
+        }
+    }
+    writeJsonAtomic(filePath, payload);
+    return true;
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function extractTilesFromDOM(page) {
@@ -105,9 +130,9 @@ async function main() {
             source: NYT_URL
         };
 
-        writeJsonAtomic(path.join(OUT_DIR, `${date}.json`), payload);
-        writeJsonAtomic(path.join(OUT_DIR, "latest.json"), payload);
-        console.log("Data written successfully.");
+        const wroteDated = writeIfChanged(path.join(OUT_DIR, `${date}.json`), payload);
+        const wroteLatest = writeIfChanged(path.join(OUT_DIR, "latest.json"), payload);
+        console.log(wroteDated || wroteLatest ? "Data written." : "No changes; nothing written.");
     } finally {
         await browser.close();
         console.log("Browser closed.");
