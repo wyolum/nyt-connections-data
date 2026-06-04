@@ -5,6 +5,10 @@ const { chromium } = playwright;
 
 const NYT_URL = "https://www.nytimes.com/games/connections";
 const OUT_DIR = path.resolve("docs", "data");
+const TILE_SELECTOR = 'label[data-testid="card-label"]';
+const MAX_ATTEMPTS = 3;
+const USER_AGENT =
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
 function ymdUTC(d = new Date()) {
     const yyyy = d.getUTCFullYear();
@@ -20,53 +24,71 @@ function writeJsonAtomic(filePath, obj) {
     fs.renameSync(tmp, filePath);
 }
 
-function looksLikeTile(s) {
-    // Conservative heuristic; you will refine this after one live run.
-    if (!s) return false;
-    if (s.length < 2 || s.length > 30) return false;
-    // NYT tiles are typically uppercase words/phrases; allow spaces/apostrophes/hyphens.
-    if (!/^[A-Z0-9' -]+$/.test(s)) return false;
-    return true;
-}
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function extractTilesFromDOM(page) {
-    // First, check for and click the "Play" button if it exists (splash screen)
+    // Dismiss the splash screen if present so the grid renders.
     const playButton = page.getByRole("button", { name: /Play/i });
-    if (await playButton.isVisible()) {
+    if (await playButton.count().then((n) => n > 0 && playButton.first().isVisible()).catch(() => false)) {
         console.log("Clicking 'Play' button...");
-        await playButton.click();
-        // Wait for the grid to animate in
-        await page.waitForTimeout(1000);
+        await playButton.first().click().catch(() => {});
     }
 
-    return await page.evaluate(() => {
-        // NYT uses label[data-testid="card-label"] for the tiles
-        const nodes = document.querySelectorAll('label[data-testid="card-label"]');
-        return Array.from(nodes).map(el => (el.textContent || "").trim());
-    });
+    // Wait for the grid to actually be present rather than guessing with a fixed delay.
+    // This is the main flakiness fix: slow loads now wait, they don't fail.
+    await page.waitForFunction(
+        (sel) => document.querySelectorAll(sel).length === 16,
+        TILE_SELECTOR,
+        { timeout: 30000 }
+    );
+
+    return await page.evaluate((sel) => {
+        const nodes = document.querySelectorAll(sel);
+        return Array.from(nodes).map((el) => (el.textContent || "").trim());
+    }, TILE_SELECTOR);
+}
+
+async function scrapeOnce(browser) {
+    const page = await browser.newPage({ userAgent: USER_AGENT });
+    try {
+        console.log(`Navigating to ${NYT_URL}...`);
+        await page.goto(NYT_URL, { waitUntil: "domcontentloaded", timeout: 90000 });
+        console.log("Page loaded (domcontentloaded).");
+
+        const tiles = await extractTilesFromDOM(page);
+        console.log(`Extracted ${tiles.length} tiles:`, tiles);
+
+        if (tiles.length !== 16) {
+            throw new Error(`Failed to extract 16 tiles; got ${tiles.length}. Found: ${tiles.join(", ")}`);
+        }
+        return tiles;
+    } catch (err) {
+        // Capture what the page looked like on the final failure for debugging.
+        await page.screenshot({ path: "failure.png", fullPage: true }).catch(() => {});
+        throw err;
+    } finally {
+        await page.close();
+    }
 }
 
 async function main() {
     const date = ymdUTC();
     const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage({
-        userAgent:
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
-    });
 
-    console.log(`Navigating to ${NYT_URL}...`);
     try {
-        await page.goto(NYT_URL, { waitUntil: "domcontentloaded", timeout: 90000 });
-        console.log("Page loaded (domcontentloaded).");
-        await page.waitForTimeout(5000);
-        console.log("Wait finished.");
-
-        // Grab candidate texts in page order.
-        const tiles = await extractTilesFromDOM(page);
-        console.log(`Extracted ${tiles.length} tiles:`, tiles);
-
-        if (tiles.length !== 16) {
-            throw new Error(`Failed to extract 16 tiles; got ${tiles.length}. Found: ${tiles.join(', ')}`);
+        let tiles;
+        for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+            try {
+                console.log(`Attempt ${attempt}/${MAX_ATTEMPTS}...`);
+                tiles = await scrapeOnce(browser);
+                break;
+            } catch (err) {
+                console.error(`Attempt ${attempt} failed:`, err.message);
+                if (attempt === MAX_ATTEMPTS) throw err;
+                const backoff = 5000 * attempt;
+                console.log(`Retrying in ${backoff / 1000}s...`);
+                await sleep(backoff);
+            }
         }
 
         const payload = {
@@ -76,15 +98,9 @@ async function main() {
             source: NYT_URL
         };
 
-        // Write dated + latest
         writeJsonAtomic(path.join(OUT_DIR, `${date}.json`), payload);
         writeJsonAtomic(path.join(OUT_DIR, "latest.json"), payload);
-        console.log(`Data written successfully.`);
-    } catch (err) {
-        console.error("Scrape failed:", err.message);
-        await page.screenshot({ path: "failure.png", fullPage: true });
-        console.log("Failure screenshot saved to failure.png");
-        throw err;
+        console.log("Data written successfully.");
     } finally {
         await browser.close();
         console.log("Browser closed.");
