@@ -272,7 +272,10 @@
       sourceSelect.addEventListener('change', loadPuzzle);
 
       document.getElementById('shuffle').onclick = () => {
-        currentWords.sort(() => Math.random() - 0.5);
+        for (let i = currentWords.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [currentWords[i], currentWords[j]] = [currentWords[j], currentWords[i]];
+        }
         renderGrid(currentWords);
         selectedRow = null;
         selectedTile = null;
