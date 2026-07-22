@@ -88,7 +88,7 @@
     .grid {
       width: 100%;
       max-width: none;
-      margin: 0;
+      margin: 0 auto;
     }
 
     .row-container {
@@ -270,6 +270,7 @@
       // Event listeners
       dateInput.addEventListener('change', loadPuzzle);
       sourceSelect.addEventListener('change', loadPuzzle);
+      window.addEventListener('resize', fitBoard);
 
       document.getElementById('shuffle').onclick = () => {
         for (let i = currentWords.length - 1; i > 0; i--) {
@@ -399,6 +400,21 @@
       return '20px';
     }
 
+    // Cap the board so all 4 rows fit the viewport height, then center it.
+    // On phones the computed cap exceeds the screen width, so width:100% wins
+    // and the board stays full-bleed; on a laptop it shrinks to fit vertically
+    // (no scrolling) instead of overflowing with oversized tiles.
+    const ROW_GAP = 5;      // .row-container margin-bottom + grid-gap
+    const HORIZ_UNITS = 4.25; // 4 tiles (1fr) + right color bar (0.25fr)
+    function fitBoard() {
+      const top = grid.getBoundingClientRect().top;
+      const reserveBottom = 70; // Shuffle button + breathing room
+      const avail = window.innerHeight - top - reserveBottom;
+      const colW = (avail - 4 * ROW_GAP) / 4;
+      const boardW = HORIZ_UNITS * colW + 4 * ROW_GAP;
+      grid.style.maxWidth = Math.max(240, Math.floor(boardW)) + 'px';
+    }
+
     function renderGrid(words) {
       grid.innerHTML = '';
       for (let r = 0; r < 4; r++) {
@@ -438,6 +454,7 @@
 
         grid.appendChild(row);
       }
+      fitBoard();
     }
 
     /* ---------- TILE INTERACTION ---------- */
