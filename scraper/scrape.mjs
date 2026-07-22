@@ -76,7 +76,27 @@ async function extractTilesFromDOM(page) {
 
     return await page.evaluate((sel) => {
         const nodes = document.querySelectorAll(sel);
-        return Array.from(nodes).map((el) => (el.textContent || "").trim());
+        return Array.from(nodes).map((el) => {
+            // NYT renders each tile word TWICE inside the label: a hidden
+            // "reference" span (used for font sizing, aria-hidden) plus the
+            // visible span. So el.textContent concatenates both copies and
+            // yields e.g. "HOLEHOLE". Read an explicit single-value source
+            // instead. The hidden checkbox input carries the clean word in its
+            // value/aria-label; the label also mirrors it in data-flip-id.
+            const input = el.querySelector("input[value]");
+            if (input && input.value.trim()) return input.value.trim();
+            const flipId = (el.getAttribute("data-flip-id") || "").trim();
+            if (flipId) return flipId;
+            // Fallback: collapse identical duplicated child spans. Genuine
+            // single-copy tiles (incl. real doubled words like "TUTU") have one
+            // distinct value and pass through unchanged.
+            const spans = Array.from(el.querySelectorAll("span"))
+                .map((s) => (s.textContent || "").trim())
+                .filter((s) => s.length > 0);
+            const distinct = [...new Set(spans)];
+            if (distinct.length === 1) return distinct[0];
+            return (el.textContent || "").trim();
+        });
     }, TILE_SELECTOR);
 }
 
