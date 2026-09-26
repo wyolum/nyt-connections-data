@@ -10,35 +10,54 @@ permissions:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: ubuntu-latest moves to 26 on 2026-10-19
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      # Fallback only: the Mac mini is primary. On a scheduled run, skip the
+      # scrape if today's file already exists. Manual dispatch always scrapes.
+      - name: Check whether today's data already exists
+        id: have
+        run: |
+          f="docs/data/$(date -u +%F).json"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$f" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::$f already present (Mac mini ran); skipping cloud scrape."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::$f missing or manual run; scraping."
+          fi
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        if: steps.have.outputs.skip != 'true'
+        uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Install deps
+        if: steps.have.outputs.skip != 'true'
         working-directory: scraper
         run: npm ci
 
       - name: Install Playwright browsers
+        if: steps.have.outputs.skip != 'true'
         working-directory: scraper
         run: npx playwright install --with-deps chromium
 
       - name: Run scraper
+        if: steps.have.outputs.skip != 'true'
         run: node scraper/scrape.mjs
 
       - name: Upload failure screenshot
-        if: failure()
-        uses: actions/upload-artifact@v4
+        if: failure() && steps.have.outputs.skip != 'true'
+        uses: actions/upload-artifact@v5
         with:
           name: failure-screenshot
           path: failure.png
 
       - name: Commit and push if changed
+        if: steps.have.outputs.skip != 'true'
         run: |
           git config user.name "wyolum-bot"
           git config user.email "wyolum-bot@users.noreply.github.com"
