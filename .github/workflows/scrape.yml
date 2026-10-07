@@ -20,7 +20,7 @@ jobs:
       - name: Check whether today's data already exists
         id: have
         run: |
-          f="docs/data/$(date -u +%F).json"
+          f="docs/data/$(TZ=America/New_York date +%F).json"
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f "$f" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
             echo "::notice::$f already present (Mac mini ran); skipping cloud scrape."
