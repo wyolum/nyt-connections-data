@@ -10,11 +10,49 @@ const MAX_ATTEMPTS = 3;
 const USER_AGENT =
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
-function ymdUTC(d = new Date()) {
-    const yyyy = d.getUTCFullYear();
-    const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
-    const dd = String(d.getUTCDate()).padStart(2, "0");
-    return `${yyyy}-${mm}-${dd}`;
+// Puzzle day is defined in US Eastern time (new board drops at 03:00 ET).
+function ymdET(d = new Date()) {
+    return new Intl.DateTimeFormat("en-CA", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    }).format(d); // en-CA formats as YYYY-MM-DD
+}
+
+const API_URL = (date) => `https://www.nytimes.com/svc/connections/v2/${date}.json`;
+
+// Primary source: the JSON the game itself loads. No browser, no splash screen,
+// no DOM selectors. Returns the 16 tiles in starting-board order (by `position`)
+// and deliberately drops the group answers so the stored format is unchanged.
+async function fetchTilesFromApi(date) {
+    const url = API_URL(date);
+    console.log(`Fetching ${url}...`);
+    const res = await fetch(url, {
+        headers: { "User-Agent": USER_AGENT, Accept: "application/json" }
+    });
+    if (!res.ok) throw new Error(`API HTTP ${res.status} for ${url}`);
+    const data = await res.json();
+    if (!Array.isArray(data.categories)) {
+        throw new Error(`API response has no categories array (keys: ${Object.keys(data).join(", ")})`);
+    }
+    const board = new Array(16).fill(null);
+    for (const cat of data.categories) {
+        for (const card of cat.cards || []) {
+            const word = (card.content || "").trim();
+            const pos = card.position;
+            if (!word) throw new Error(`API card with no text content (image puzzle?): ${JSON.stringify(card)}`);
+            if (!Number.isInteger(pos) || pos < 0 || pos >= 16) throw new Error(`API card bad position: ${JSON.stringify(card)}`);
+            if (board[pos] !== null) throw new Error(`API duplicate position ${pos}`);
+            board[pos] = word;
+        }
+    }
+    const missing = board.flatMap((w, i) => (w === null ? [i] : []));
+    if (missing.length) throw new Error(`API board missing positions: ${missing.join(", ")}`);
+    if (data.print_date && data.print_date !== date) {
+        throw new Error(`API print_date ${data.print_date} != requested ${date}`);
+    }
+    return board;
 }
 
 function writeJsonAtomic(filePath, obj) {
@@ -117,16 +155,26 @@ async function scrapeOnce(browser) {
     } catch (err) {
         // Capture what the page looked like on the final failure for debugging.
         await page.screenshot({ path: "failure.png", fullPage: true }).catch(() => {});
+        // Dump DOM hooks so a selector change is diagnosable from the log alone.
+        const diag = await page
+            .evaluate((sel) => ({
+                url: location.href,
+                title: document.title,
+                tileCount: document.querySelectorAll(sel).length,
+                testids: [...new Set([...document.querySelectorAll("[data-testid]")]
+                    .map((e) => `${e.tagName.toLowerCase()}[data-testid="${e.dataset.testid}"]`))],
+                bodyText: (document.body?.innerText || "").slice(0, 600)
+            }), TILE_SELECTOR)
+            .catch((e) => ({ error: e.message }));
+        console.error("DOM diagnostics:", JSON.stringify(diag, null, 2));
         throw err;
     } finally {
         await page.close();
     }
 }
 
-async function main() {
-    const date = ymdUTC();
+async function scrapeViaBrowser() {
     const browser = await chromium.launch({ headless: true });
-
     try {
         let tiles;
         for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
@@ -142,21 +190,40 @@ async function main() {
                 await sleep(backoff);
             }
         }
-
-        const payload = {
-            date,
-            tiles,
-            fetched_at: new Date().toISOString(),
-            source: NYT_URL
-        };
-
-        const wroteDated = writeIfChanged(path.join(OUT_DIR, `${date}.json`), payload);
-        const wroteLatest = writeIfChanged(path.join(OUT_DIR, "latest.json"), payload);
-        console.log(wroteDated || wroteLatest ? "Data written." : "No changes; nothing written.");
+        return tiles;
     } finally {
         await browser.close();
         console.log("Browser closed.");
     }
+}
+
+async function main() {
+    // Optional date override for backfill: node scrape.mjs 2026-10-06
+    const arg = process.argv[2];
+    if (arg && !/^\d{4}-\d{2}-\d{2}$/.test(arg)) throw new Error(`Bad date argument "${arg}", want YYYY-MM-DD`);
+    const today = ymdET();
+    const date = arg || today;
+
+    let tiles;
+    let source;
+    try {
+        tiles = await fetchTilesFromApi(date);
+        source = API_URL(date);
+        console.log("Got tiles from API.");
+    } catch (err) {
+        console.error(`API path failed: ${err.message}`);
+        if (date !== today) throw new Error(`Backfill for ${date} needs the API; browser fallback only sees today's board.`);
+        console.log("Falling back to browser scrape...");
+        tiles = await scrapeViaBrowser();
+        source = NYT_URL;
+    }
+    console.log(`Tiles (${tiles.length}):`, tiles);
+
+    const payload = { date, tiles, fetched_at: new Date().toISOString(), source };
+    const wroteDated = writeIfChanged(path.join(OUT_DIR, `${date}.json`), payload);
+    // Only advance latest.json for today's puzzle, never for a backfill.
+    const wroteLatest = date === today && writeIfChanged(path.join(OUT_DIR, "latest.json"), payload);
+    console.log(wroteDated || wroteLatest ? "Data written." : "No changes; nothing written.");
 }
 
 main().catch((err) => {
