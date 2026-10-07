@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-06",
+  "tiles": [
+    "ADIRONDACK",
+    "KNICKKNACK",
+    "CATSKILL",
+    "HOLIDAY",
+    "COMFORT",
+    "BERKSHIRE",
+    "STABILITY",
+    "HAMPTON",
+    "WINDSOR",
+    "MERRILL",
+    "WINGBACK",
+    "DAYS",
+    "CITI",
+    "PIANOFORTE",
+    "EAMES",
+    "GOLDMAN"
+  ],
+  "fetched_at": "2026-10-07T11:09:23.825Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-06.json"
+}
