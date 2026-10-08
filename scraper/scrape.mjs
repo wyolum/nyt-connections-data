@@ -197,33 +197,71 @@ async function scrapeViaBrowser() {
     }
 }
 
+// How many days past today to prefetch. NYT publishes boards weeks ahead, and
+// readers east of New York (Europe, Asia, Oceania) hit their local "today"
+// before our 03:10 ET run. One day covers every time zone; the rest is slack
+// in case the mini misses a few nights.
+const LOOKAHEAD_DAYS = 7;
+
+function addDays(ymd, n) {
+    const d = new Date(`${ymd}T12:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+}
+
+function save(date, tiles, source, isToday) {
+    const payload = { date, tiles, fetched_at: new Date().toISOString(), source };
+    const wroteDated = writeIfChanged(path.join(OUT_DIR, `${date}.json`), payload);
+    // Only advance latest.json for today's puzzle, never for backfill or future.
+    const wroteLatest = isToday && writeIfChanged(path.join(OUT_DIR, "latest.json"), payload);
+    return wroteDated || wroteLatest;
+}
+
 async function main() {
-    // Optional date override for backfill: node scrape.mjs 2026-10-06
+    // Optional date override for a single backfill: node scrape.mjs 2026-10-06
     const arg = process.argv[2];
     if (arg && !/^\d{4}-\d{2}-\d{2}$/.test(arg)) throw new Error(`Bad date argument "${arg}", want YYYY-MM-DD`);
     const today = ymdET();
-    const date = arg || today;
 
+    if (arg) {
+        const tiles = await fetchTilesFromApi(arg); // browser can't see other days
+        console.log(`Tiles for ${arg}:`, tiles);
+        console.log(save(arg, tiles, API_URL(arg), arg === today) ? "Data written." : "No changes; nothing written.");
+        return;
+    }
+
+    // Today is mandatory: API first, browser fallback, fail loudly if both fail.
     let tiles;
     let source;
     try {
-        tiles = await fetchTilesFromApi(date);
-        source = API_URL(date);
-        console.log("Got tiles from API.");
+        tiles = await fetchTilesFromApi(today);
+        source = API_URL(today);
+        console.log("Got today's tiles from API.");
     } catch (err) {
         console.error(`API path failed: ${err.message}`);
-        if (date !== today) throw new Error(`Backfill for ${date} needs the API; browser fallback only sees today's board.`);
         console.log("Falling back to browser scrape...");
         tiles = await scrapeViaBrowser();
         source = NYT_URL;
     }
-    console.log(`Tiles (${tiles.length}):`, tiles);
+    console.log(`Today ${today} (${tiles.length}):`, tiles);
+    const written = [];
+    if (save(today, tiles, source, true)) written.push(today);
 
-    const payload = { date, tiles, fetched_at: new Date().toISOString(), source };
-    const wroteDated = writeIfChanged(path.join(OUT_DIR, `${date}.json`), payload);
-    // Only advance latest.json for today's puzzle, never for a backfill.
-    const wroteLatest = date === today && writeIfChanged(path.join(OUT_DIR, "latest.json"), payload);
-    console.log(wroteDated || wroteLatest ? "Data written." : "No changes; nothing written.");
+    // Future days are best effort: a miss is expected near the end of what NYT
+    // has published, so it is reported, not fatal.
+    const skipped = [];
+    for (let i = 1; i <= LOOKAHEAD_DAYS; i++) {
+        const d = addDays(today, i);
+        try {
+            const t = await fetchTilesFromApi(d);
+            if (save(d, t, API_URL(d), false)) written.push(d);
+        } catch (err) {
+            skipped.push(`${d} (${err.message})`);
+        }
+    }
+
+    console.log(written.length ? `Written: ${written.join(", ")}` : "No changes; nothing written.");
+    if (skipped.length) console.warn(`Lookahead skipped ${skipped.length}/${LOOKAHEAD_DAYS}:\n  ${skipped.join("\n  ")}`);
 }
 
 main().catch((err) => {
