@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-10",
+  "tiles": [
+    "OUTLINE",
+    "SHADOW",
+    "FEED",
+    "FIGURE",
+    "DRAFT",
+    "IMAGINE",
+    "KICK",
+    "NOTIFICATIONS",
+    "GATHER",
+    "NOTES",
+    "UN",
+    "MESSAGES",
+    "BEAT",
+    "SUPPOSE",
+    "PROFILE",
+    "THESIS"
+  ],
+  "fetched_at": "2026-10-08T22:47:37.601Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-10.json"
+}

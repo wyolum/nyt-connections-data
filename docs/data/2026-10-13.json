@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-13",
+  "tiles": [
+    "EYE",
+    "LASH",
+    "LIPS",
+    "JACKET",
+    "TIE",
+    "SENSE",
+    "CHANGE",
+    "BELT",
+    "RING",
+    "TASTE",
+    "CUP",
+    "HITCH",
+    "CANNON",
+    "TETHER",
+    "FLAIR",
+    "ENDS"
+  ],
+  "fetched_at": "2026-10-08T22:47:37.961Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-13.json"
+}

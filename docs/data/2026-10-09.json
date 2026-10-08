@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "tiles": [
+    "POWER",
+    "GUITAR",
+    "CONDITIONER",
+    "VOLUME",
+    "BLOWOUT",
+    "KISS",
+    "SWEEP",
+    "HIGHLIGHTS",
+    "SCORES",
+    "QUOTES",
+    "INPUT",
+    "STATS",
+    "CHANNEL",
+    "ROMP",
+    "RECAP",
+    "ROUT"
+  ],
+  "fetched_at": "2026-10-08T22:47:37.515Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-09.json"
+}

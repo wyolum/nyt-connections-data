@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15",
+  "tiles": [
+    "SMOKE",
+    "BASKET",
+    "DRY",
+    "FOOT",
+    "VOLLEY",
+    "CANNON",
+    "RUN",
+    "PICKLE",
+    "BASE",
+    "GOAL",
+    "FORGE",
+    "FOUNDATION",
+    "CURE",
+    "RACINE",
+    "BOTTOM",
+    "TOUCHDOWN"
+  ],
+  "fetched_at": "2026-10-08T22:47:38.376Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-15.json"
+}

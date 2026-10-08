@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-14",
+  "tiles": [
+    "FEED",
+    "THING",
+    "SERVE",
+    "SUGGESTION",
+    "FIERY",
+    "FLICKER",
+    "FLASH",
+    "FOMENT",
+    "SMASH",
+    "HULK",
+    "TRACE",
+    "FUMBLE",
+    "SLICE",
+    "WHIFF",
+    "VOLLEY",
+    "PUNISHER"
+  ],
+  "fetched_at": "2026-10-08T22:47:38.158Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-14.json"
+}

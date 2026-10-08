@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-12",
+  "tiles": [
+    "CALAMARI",
+    "MANDARIN",
+    "STATE",
+    "ABBREVIATION",
+    "NICKNAME",
+    "HANDLE",
+    "SHAPE",
+    "WEATHER",
+    "CONDITION",
+    "CONTRACTION",
+    "SITUATION",
+    "BEAR",
+    "ALKYLAMIDE",
+    "STAND",
+    "ELISION",
+    "MELAMINE"
+  ],
+  "fetched_at": "2026-10-08T22:47:37.770Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-12.json"
+}
