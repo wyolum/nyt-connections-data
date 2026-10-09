@@ -10,9 +10,13 @@ REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 LABEL="com.wyolum.nyt-connections"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 
-# Scrape time (local mini time). NYT publishes the new puzzle at 03:00 ET.
+# Scrape times (local mini time). NYT publishes the new puzzle at 03:00 ET.
+# The 15:10 run re-checks today + lookahead so a puzzle NYT swaps after the
+# morning run is corrected within ~12h instead of ~24h.
 HOUR=3
 MINUTE=10
+HOUR2=15
+MINUTE2=10
 
 mkdir -p "$HOME/Library/LaunchAgents" "$SCRIPT_DIR/logs"
 
@@ -29,10 +33,16 @@ cat > "$PLIST" <<EOF
         <string>$SCRIPT_DIR/run-scrape.sh</string>
     </array>
     <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key><integer>$HOUR</integer>
-        <key>Minute</key><integer>$MINUTE</integer>
-    </dict>
+    <array>
+        <dict>
+            <key>Hour</key><integer>$HOUR</integer>
+            <key>Minute</key><integer>$MINUTE</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>$HOUR2</integer>
+            <key>Minute</key><integer>$MINUTE2</integer>
+        </dict>
+    </array>
     <key>StandardOutPath</key>
     <string>$SCRIPT_DIR/logs/launchd.out.log</string>
     <key>StandardErrorPath</key>
@@ -48,7 +58,7 @@ echo "Wrote $PLIST"
 # (Re)load the agent.
 launchctl unload "$PLIST" 2>/dev/null || true
 launchctl load "$PLIST"
-echo "Loaded launchd agent '$LABEL' (fires daily at $(printf '%02d:%02d' "$HOUR" "$MINUTE") local time)."
+echo "Loaded launchd agent '$LABEL' (fires daily at $(printf '%02d:%02d' "$HOUR" "$MINUTE") and $(printf '%02d:%02d' "$HOUR2" "$MINUTE2") local time)."
 
 # Schedule a wake a few minutes before, so the mini is awake to run the job.
 # Requires sudo. If the mini never sleeps, this is harmless.

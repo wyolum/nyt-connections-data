@@ -79,6 +79,19 @@ function writeIfChanged(filePath, payload) {
                 console.log(`Unchanged, skipping write: ${filePath}`);
                 return false;
             }
+            // Same day, different board: NYT swapped a queued puzzle. Say so.
+            if (existing.date === payload.date && Array.isArray(existing.tiles) && !filePath.endsWith("latest.json")) {
+                const was = new Set(existing.tiles);
+                const now = new Set(payload.tiles);
+                const removed = existing.tiles.filter((t) => !now.has(t));
+                const added = payload.tiles.filter((t) => !was.has(t));
+                console.warn(
+                    `NYT CHANGED ${payload.date}: ` +
+                    (removed.length || added.length
+                        ? `removed [${removed.join(", ")}] added [${added.join(", ")}]`
+                        : "same words, new order")
+                );
+            }
         } catch {
             // Corrupt/unreadable existing file — fall through and overwrite.
         }
