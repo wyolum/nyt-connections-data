@@ -74,7 +74,8 @@ You should see tiles extracted and either a push or "No data changes to commit."
 - **`run-scrape.sh`** — pulls latest, installs deps on first run, runs
   `scraper/scrape.mjs`, then commits & pushes `docs/data/*.json` only if changed.
   Locks against overlapping runs and logs to `local/logs/`.
-- **`install.sh`** — generates and loads the `launchd` agent for 03:10 local time.
+- **`install.sh`** — generates and loads the `launchd` agent for 03:10 and 15:10 local time
+  (the afternoon run catches puzzles NYT swaps after the morning scrape).
 - The scraper itself was hardened to **wait for the 16 tiles to render** (instead
   of a fixed delay) and to **retry up to 3×**, which removes most slow-load flakiness.
 
