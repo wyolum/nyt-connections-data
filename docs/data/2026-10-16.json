@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-16",
+  "tiles": [
+    "HUNGARY",
+    "HUNGRY",
+    "HIPPO",
+    "CHICKEN",
+    "CHIP",
+    "CHAD",
+    "COOLIDGE",
+    "CYRUS",
+    "SPAN",
+    "MARK",
+    "LAOS",
+    "NICK",
+    "PARAGUAY",
+    "SMARTIES",
+    "BULGARI",
+    "SCRATCH"
+  ],
+  "fetched_at": "2026-10-09T07:10:05.499Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-16.json"
+}

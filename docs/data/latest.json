@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "tiles": [
-    "FOOLHARDY",
-    "MINDS",
-    "THANKS",
-    "STOOGES",
-    "BEST",
-    "WISHES",
-    "REGARDS",
-    "ECLIPSE",
-    "CHEERS",
-    "MULHOLLAND",
-    "RESPECTS",
-    "STRIKES",
-    "TOP",
-    "AUTOCRUISE",
-    "HEEDS",
-    "SURPASS"
+    "POWER",
+    "GUITAR",
+    "CONDITIONER",
+    "VOLUME",
+    "BLOWOUT",
+    "KISS",
+    "SWEEP",
+    "HIGHLIGHTS",
+    "SCORES",
+    "QUOTES",
+    "INPUT",
+    "STATS",
+    "CHANNEL",
+    "ROMP",
+    "RECAP",
+    "ROUT"
   ],
-  "fetched_at": "2026-10-08T07:10:06.231Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-08.json"
+  "fetched_at": "2026-10-09T07:10:04.933Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-09.json"
 }
