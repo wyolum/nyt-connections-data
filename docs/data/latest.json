@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "tiles": [
-    "POWER",
-    "GUITAR",
-    "CONDITIONER",
-    "VOLUME",
-    "BLOWOUT",
-    "KISS",
-    "SWEEP",
-    "HIGHLIGHTS",
-    "SCORES",
-    "QUOTES",
-    "INPUT",
-    "STATS",
-    "CHANNEL",
-    "ROMP",
-    "RECAP",
-    "ROUT"
+    "OUTLINE",
+    "SHADOW",
+    "FEED",
+    "FIGURE",
+    "DRAFT",
+    "IMAGINE",
+    "KICK",
+    "NOTIFICATIONS",
+    "GATHER",
+    "NOTES",
+    "UN",
+    "MESSAGES",
+    "BEAT",
+    "SUPPOSE",
+    "PROFILE",
+    "THESIS"
   ],
-  "fetched_at": "2026-10-09T07:10:04.933Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-09.json"
+  "fetched_at": "2026-10-10T07:10:06.052Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-10.json"
 }

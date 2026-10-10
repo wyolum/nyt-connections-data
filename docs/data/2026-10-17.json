@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-17",
+  "tiles": [
+    "BREA",
+    "KING",
+    "SNAP",
+    "PING",
+    "STILL",
+    "PAZ",
+    "SNOW",
+    "SHOT",
+    "BOHÈME",
+    "FIDDLER",
+    "ALERT",
+    "PRINT",
+    "CHIME",
+    "SCALA",
+    "HERMIT",
+    "DING"
+  ],
+  "fetched_at": "2026-10-10T07:10:06.920Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-17.json"
+}
