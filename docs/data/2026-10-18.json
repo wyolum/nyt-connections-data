@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-18",
+  "tiles": [
+    "ANGEL",
+    "BUTTER",
+    "HAZEL",
+    "DEODORANT",
+    "COCO",
+    "DYNAMITE",
+    "MISTER",
+    "FOGERTY",
+    "CHEST",
+    "INCENSE",
+    "VAPORETTO",
+    "BUREAU",
+    "OBSESSION",
+    "TRUNK",
+    "OPIUM",
+    "WARDROBE"
+  ],
+  "fetched_at": "2026-10-11T07:10:05.082Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-18.json"
+}

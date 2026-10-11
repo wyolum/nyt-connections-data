@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "tiles": [
-    "OUTLINE",
-    "SHADOW",
-    "FEED",
-    "FIGURE",
-    "DRAFT",
-    "IMAGINE",
-    "KICK",
-    "NOTIFICATIONS",
-    "GATHER",
-    "NOTES",
-    "UN",
-    "MESSAGES",
-    "BEAT",
-    "SUPPOSE",
-    "PROFILE",
-    "THESIS"
+    "HARNESS",
+    "MAP",
+    "PERUSE",
+    "PHONE",
+    "GLOVES",
+    "CABLE",
+    "APPLY",
+    "PATRICK",
+    "ELECTRICITY",
+    "WIELD",
+    "ICE SCRAPER",
+    "UTILIZE",
+    "EMPLOY",
+    "REGISTRATION",
+    "SYNTACTIC",
+    "INTERNET"
   ],
-  "fetched_at": "2026-10-10T07:10:06.052Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-10.json"
+  "fetched_at": "2026-10-11T07:10:04.602Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-11.json"
 }
