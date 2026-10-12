@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "tiles": [
+    "MOHAWK",
+    "MUFFIN",
+    "HOT AIR",
+    "BALLOON",
+    "RAVE",
+    "WIND",
+    "FLURRY",
+    "STEAM",
+    "GAS",
+    "RIB",
+    "FUME",
+    "ALIBIS",
+    "BOIL",
+    "BLATHER",
+    "ESCROW",
+    "NUGGETS"
+  ],
+  "fetched_at": "2026-10-12T07:10:07.507Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-19.json"
+}

@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "tiles": [
-    "HARNESS",
-    "MAP",
-    "PERUSE",
-    "PHONE",
-    "GLOVES",
-    "CABLE",
-    "APPLY",
-    "PATRICK",
-    "ELECTRICITY",
-    "WIELD",
-    "ICE SCRAPER",
-    "UTILIZE",
-    "EMPLOY",
-    "REGISTRATION",
-    "SYNTACTIC",
-    "INTERNET"
+    "CALAMARI",
+    "MANDARIN",
+    "STATE",
+    "ABBREVIATION",
+    "NICKNAME",
+    "HANDLE",
+    "SHAPE",
+    "WEATHER",
+    "CONDITION",
+    "CONTRACTION",
+    "SITUATION",
+    "BEAR",
+    "ALKYLAMIDE",
+    "STAND",
+    "ELISION",
+    "MELAMINE"
   ],
-  "fetched_at": "2026-10-11T07:10:04.602Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-11.json"
+  "fetched_at": "2026-10-12T07:10:06.970Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-12.json"
 }
