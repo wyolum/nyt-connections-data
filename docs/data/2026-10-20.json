@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-20",
+  "tiles": [
+    "CHEVRON",
+    "DOCK",
+    "BELL",
+    "PENCIL",
+    "POODLE",
+    "WRAP",
+    "MINI",
+    "MINION",
+    "WALRUS",
+    "PUPPET",
+    "CLOSE",
+    "HORSESHOE",
+    "ARIAL",
+    "STOP",
+    "STOOGE",
+    "END"
+  ],
+  "fetched_at": "2026-10-13T07:10:07.430Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-20.json"
+}
