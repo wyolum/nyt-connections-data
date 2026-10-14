@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "tiles": [
-    "EYE",
-    "LASH",
-    "LIPS",
-    "JACKET",
-    "TIE",
-    "SENSE",
-    "CHANGE",
-    "BELT",
-    "RING",
-    "TASTE",
-    "CUP",
-    "HITCH",
-    "CANNON",
-    "TETHER",
-    "FLAIR",
-    "ENDS"
+    "FEED",
+    "THING",
+    "SERVE",
+    "SUGGESTION",
+    "FIERY",
+    "FLICKER",
+    "FLASH",
+    "FOMENT",
+    "SMASH",
+    "HULK",
+    "TRACE",
+    "FUMBLE",
+    "SLICE",
+    "WHIFF",
+    "VOLLEY",
+    "PUNISHER"
   ],
-  "fetched_at": "2026-10-13T07:10:06.871Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-13.json"
+  "fetched_at": "2026-10-14T07:10:06.751Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-14.json"
 }

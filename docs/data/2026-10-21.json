@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-21",
+  "tiles": [
+    "ENGLISH HORN",
+    "LEAPFROG",
+    "ALPHA DOG",
+    "SWEETBREAD",
+    "HOT POTATO",
+    "MANTIS SHRIMP",
+    "SUNFLOWERS",
+    "BIG CHEESE",
+    "AMERICAN GOTHIC",
+    "GRAPE-NUTS",
+    "CAMPBELL'S SOUP CAN",
+    "DUCK DUCK GOOSE",
+    "TOP BANANA",
+    "THE SCREAM",
+    "MUSICAL CHAIRS",
+    "HEAVYWEIGHT"
+  ],
+  "fetched_at": "2026-10-14T07:10:07.715Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-21.json"
+}
