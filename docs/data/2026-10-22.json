@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "tiles": [
+    "MOBILE",
+    "COMFORT",
+    "BLANK",
+    "SAFETY",
+    "RELIEF",
+    "GRIP",
+    "END",
+    "BUST",
+    "HANDLE",
+    "TACKLE",
+    "PILL",
+    "KNOB",
+    "SHE",
+    "GUARD",
+    "HILT",
+    "STATUE"
+  ],
+  "fetched_at": "2026-10-15T07:10:07.045Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-22.json"
+}

@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "tiles": [
-    "FEED",
-    "THING",
-    "SERVE",
-    "SUGGESTION",
-    "FIERY",
-    "FLICKER",
-    "FLASH",
-    "FOMENT",
-    "SMASH",
-    "HULK",
-    "TRACE",
-    "FUMBLE",
-    "SLICE",
-    "WHIFF",
+    "SMOKE",
+    "BASKET",
+    "DRY",
+    "FOOT",
     "VOLLEY",
-    "PUNISHER"
+    "CANNON",
+    "RUN",
+    "PICKLE",
+    "BASE",
+    "GOAL",
+    "FORGE",
+    "FOUNDATION",
+    "CURE",
+    "RACINE",
+    "BOTTOM",
+    "TOUCHDOWN"
   ],
-  "fetched_at": "2026-10-14T07:10:06.751Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-14.json"
+  "fetched_at": "2026-10-15T07:10:06.075Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-15.json"
 }
