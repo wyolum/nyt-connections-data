@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-23",
+  "tiles": [
+    "EXTENSION",
+    "LOVE",
+    "DIRECT",
+    "POWER",
+    "SPINAL",
+    "VOCAL",
+    "DRIVER",
+    "DISTANCE",
+    "PHONE",
+    "TIME",
+    "UPDATE",
+    "OPEN",
+    "FRANK",
+    "FORCE",
+    "DOUBLE",
+    "PLUGIN"
+  ],
+  "fetched_at": "2026-10-16T07:10:03.957Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-23.json"
+}

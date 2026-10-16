@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "tiles": [
-    "SMOKE",
-    "BASKET",
-    "DRY",
-    "FOOT",
-    "VOLLEY",
-    "CANNON",
-    "RUN",
-    "PICKLE",
-    "BASE",
-    "GOAL",
-    "FORGE",
-    "FOUNDATION",
-    "CURE",
-    "RACINE",
-    "BOTTOM",
-    "TOUCHDOWN"
+    "HUNGARY",
+    "HUNGRY",
+    "HIPPO",
+    "CHICKEN",
+    "CHIP",
+    "CHAD",
+    "COOLIDGE",
+    "CYRUS",
+    "SPAN",
+    "MARK",
+    "LAOS",
+    "NICK",
+    "PARAGUAY",
+    "SMARTIES",
+    "BULGARI",
+    "SCRATCH"
   ],
-  "fetched_at": "2026-10-15T07:10:06.075Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-15.json"
+  "fetched_at": "2026-10-16T07:10:03.426Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-16.json"
 }
