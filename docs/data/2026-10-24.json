@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "tiles": [
+    "COMIC",
+    "SALAD",
+    "BACON",
+    "SPARKLER",
+    "POPSICLE",
+    "POP-UP",
+    "CANDY",
+    "HOBBY HORSE",
+    "BANNER",
+    "PINWHEEL",
+    "SPACE",
+    "FILM",
+    "INTERSTITIAL",
+    "SPORTS",
+    "MÖBIUS",
+    "OVERLAY"
+  ],
+  "fetched_at": "2026-10-17T07:10:02.846Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-24.json"
+}

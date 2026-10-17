@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-17",
   "tiles": [
-    "HUNGARY",
-    "HUNGRY",
-    "HIPPO",
-    "CHICKEN",
-    "CHIP",
-    "CHAD",
-    "COOLIDGE",
-    "CYRUS",
-    "SPAN",
-    "MARK",
-    "LAOS",
-    "NICK",
-    "PARAGUAY",
-    "SMARTIES",
-    "BULGARI",
-    "SCRATCH"
+    "BREA",
+    "KING",
+    "SNAP",
+    "PING",
+    "STILL",
+    "PAZ",
+    "SNOW",
+    "SHOT",
+    "BOHÈME",
+    "FIDDLER",
+    "ALERT",
+    "PRINT",
+    "CHIME",
+    "SCALA",
+    "HERMIT",
+    "DING"
   ],
-  "fetched_at": "2026-10-16T07:10:03.426Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-16.json"
+  "fetched_at": "2026-10-17T07:10:01.857Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-17.json"
 }
