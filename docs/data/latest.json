@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "tiles": [
-    "BREA",
-    "KING",
-    "SNAP",
-    "PING",
-    "STILL",
-    "PAZ",
-    "SNOW",
-    "SHOT",
-    "BOHÈME",
-    "FIDDLER",
-    "ALERT",
-    "PRINT",
-    "CHIME",
-    "SCALA",
-    "HERMIT",
-    "DING"
+    "ANGEL",
+    "BUTTER",
+    "HAZEL",
+    "DEODORANT",
+    "COCO",
+    "DYNAMITE",
+    "MISTER",
+    "FOGERTY",
+    "CHEST",
+    "INCENSE",
+    "VAPORETTO",
+    "BUREAU",
+    "OBSESSION",
+    "TRUNK",
+    "OPIUM",
+    "WARDROBE"
   ],
-  "fetched_at": "2026-10-17T07:10:01.857Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-17.json"
+  "fetched_at": "2026-10-18T07:10:02.062Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-18.json"
 }
