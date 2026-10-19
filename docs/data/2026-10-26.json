@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "tiles": [
+    "WELCOME",
+    "HALLOWEEK",
+    "CHILLING",
+    "TOY",
+    "YOGA",
+    "JAWN",
+    "SPORTING",
+    "PRAYER",
+    "PSYCHS",
+    "HOUND",
+    "MANAGING",
+    "WRESTLING",
+    "SAME OLD",
+    "HOSTED",
+    "HERDING",
+    "NOT BAD"
+  ],
+  "fetched_at": "2026-10-19T07:10:03.203Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-26.json"
+}

@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "tiles": [
-    "ANGEL",
-    "BUTTER",
-    "HAZEL",
-    "DEODORANT",
-    "COCO",
-    "DYNAMITE",
-    "MISTER",
-    "FOGERTY",
-    "CHEST",
-    "INCENSE",
-    "VAPORETTO",
-    "BUREAU",
-    "OBSESSION",
-    "TRUNK",
-    "OPIUM",
-    "WARDROBE"
+    "MOHAWK",
+    "MUFFIN",
+    "HOT AIR",
+    "BALLOON",
+    "RAVE",
+    "WIND",
+    "FLURRY",
+    "STEAM",
+    "GAS",
+    "RIB",
+    "FUME",
+    "ALIBIS",
+    "BOIL",
+    "BLATHER",
+    "ESCROW",
+    "NUGGETS"
   ],
-  "fetched_at": "2026-10-18T07:10:02.062Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-18.json"
+  "fetched_at": "2026-10-19T07:10:02.189Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-19.json"
 }
