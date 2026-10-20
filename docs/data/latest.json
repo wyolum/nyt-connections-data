@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "tiles": [
-    "MOHAWK",
-    "MUFFIN",
-    "HOT AIR",
-    "BALLOON",
-    "RAVE",
-    "WIND",
-    "FLURRY",
-    "STEAM",
-    "GAS",
-    "RIB",
-    "FUME",
-    "ALIBIS",
-    "BOIL",
-    "BLATHER",
-    "ESCROW",
-    "NUGGETS"
+    "CHEVRON",
+    "DOCK",
+    "BELL",
+    "PENCIL",
+    "POODLE",
+    "WRAP",
+    "MINI",
+    "MINION",
+    "WALRUS",
+    "PUPPET",
+    "CLOSE",
+    "HORSESHOE",
+    "ARIAL",
+    "STOP",
+    "STOOGE",
+    "END"
   ],
-  "fetched_at": "2026-10-19T07:10:02.189Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-19.json"
+  "fetched_at": "2026-10-20T07:10:02.061Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-20.json"
 }
