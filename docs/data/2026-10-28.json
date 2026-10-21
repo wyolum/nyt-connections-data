@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28",
+  "tiles": [
+    "CURIOSITY",
+    "ROUT",
+    "SUBJECT",
+    "ATTRACTION",
+    "ATTACHMENT",
+    "SPIRIT",
+    "BODY",
+    "COARSE",
+    "CRUSH",
+    "WEIGH",
+    "SIGNATURE",
+    "INTEREST",
+    "RODE",
+    "OPPORTUNITY",
+    "FEELINGS",
+    "PERSEVERANCE"
+  ],
+  "fetched_at": "2026-10-21T07:10:06.643Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-28.json"
+}

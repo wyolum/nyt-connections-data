@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "tiles": [
-    "CHEVRON",
-    "DOCK",
-    "BELL",
-    "PENCIL",
-    "POODLE",
-    "WRAP",
-    "MINI",
-    "MINION",
-    "WALRUS",
-    "PUPPET",
-    "CLOSE",
-    "HORSESHOE",
-    "ARIAL",
-    "STOP",
-    "STOOGE",
-    "END"
+    "ENGLISH HORN",
+    "LEAPFROG",
+    "ALPHA DOG",
+    "SWEETBREAD",
+    "HOT POTATO",
+    "MANTIS SHRIMP",
+    "SUNFLOWERS",
+    "BIG CHEESE",
+    "AMERICAN GOTHIC",
+    "GRAPE-NUTS",
+    "CAMPBELL'S SOUP CAN",
+    "DUCK DUCK GOOSE",
+    "TOP BANANA",
+    "THE SCREAM",
+    "MUSICAL CHAIRS",
+    "HEAVYWEIGHT"
   ],
-  "fetched_at": "2026-10-20T07:10:02.061Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-20.json"
+  "fetched_at": "2026-10-21T07:10:05.372Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-21.json"
 }
