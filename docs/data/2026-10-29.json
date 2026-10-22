@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "tiles": [
+    "TUXEDO",
+    "TRAFFIC LIGHT",
+    "ROMAN",
+    "EMPEROR",
+    "PARKING METER",
+    "CANDY CORN",
+    "NEAPOLITAN",
+    "PIGGY BANK",
+    "TYPEWRITER",
+    "WISHING WELL",
+    "GOTHIC",
+    "ANTARCTICA",
+    "CALICO",
+    "WADDLE",
+    "SANS",
+    "PAYPHONE"
+  ],
+  "fetched_at": "2026-10-22T07:10:03.793Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-29.json"
+}
