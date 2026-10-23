@@ -2,7 +2,7 @@ name: Scrape NYT Connections
 
 on:
   schedule:
-    - cron: "1 8 * * *" # 03:01 EST (08:01 UTC) daily.
+    - cron: "5 5 * * *" # 00:05 EST / 01:05 EDT (05:05 UTC) — fallback fires just after the midnight-ET puzzle drop.
   workflow_dispatch: {}
 
 permissions:
