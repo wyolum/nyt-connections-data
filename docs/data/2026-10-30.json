@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-30",
+  "tiles": [
+    "DEMON",
+    "PIT",
+    "HANDS",
+    "WINGS",
+    "SHUTTER",
+    "GLUM",
+    "CURTAIN",
+    "SHADE",
+    "DRAPE",
+    "FLASH",
+    "RUG",
+    "GRANGE",
+    "LENS",
+    "PILLOW",
+    "BACKDROP",
+    "VIEWFINDER"
+  ],
+  "fetched_at": "2026-10-23T07:10:03.817Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-30.json"
+}
