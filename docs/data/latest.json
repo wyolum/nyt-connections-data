@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "tiles": [
-    "COMIC",
-    "SALAD",
-    "BACON",
-    "SPARKLER",
-    "POPSICLE",
-    "POP-UP",
-    "CANDY",
-    "HOBBY HORSE",
-    "BANNER",
-    "PINWHEEL",
-    "SPACE",
-    "FILM",
-    "INTERSTITIAL",
-    "SPORTS",
-    "MÖBIUS",
-    "OVERLAY"
+    "GLOW STICK",
+    "WAGON WHEEL",
+    "POCKET",
+    "FOOTBALL",
+    "THUMB",
+    "ELBOW",
+    "SWIFT",
+    "FINGERS",
+    "SHELL",
+    "PALM",
+    "RUBBER BAND",
+    "BOW TIE",
+    "SAWYER",
+    "SWIPE",
+    "RIPLEY",
+    "BOOST"
   ],
-  "fetched_at": "2026-10-24T07:10:01.817Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-24.json"
+  "fetched_at": "2026-10-25T07:10:01.063Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-25.json"
 }
