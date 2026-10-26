@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "tiles": [
-    "GLOW STICK",
-    "WAGON WHEEL",
-    "POCKET",
-    "FOOTBALL",
-    "THUMB",
-    "ELBOW",
-    "SWIFT",
-    "FINGERS",
-    "SHELL",
-    "PALM",
-    "RUBBER BAND",
-    "BOW TIE",
-    "SAWYER",
-    "SWIPE",
-    "RIPLEY",
-    "BOOST"
+    "WELCOME",
+    "HALLOWEEK",
+    "CHILLING",
+    "TOY",
+    "YOGA",
+    "JAWN",
+    "SPORTING",
+    "PRAYER",
+    "PSYCHS",
+    "HOUND",
+    "MANAGING",
+    "WRESTLING",
+    "SAME OLD",
+    "HOSTED",
+    "HERDING",
+    "NOT BAD"
   ],
-  "fetched_at": "2026-10-25T07:10:01.063Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-25.json"
+  "fetched_at": "2026-10-26T07:10:01.522Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-26.json"
 }

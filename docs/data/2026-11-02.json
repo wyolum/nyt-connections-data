@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-02",
+  "tiles": [
+    "MEDICINE CABINET",
+    "COMPASS",
+    "FOG MACHINE",
+    "INCENSE",
+    "WATERFALL",
+    "DISCO BALL",
+    "NETTLE",
+    "HIKING BOOTS",
+    "DRESSING ROOM",
+    "DRY ICE",
+    "WATER BOTTLE",
+    "WIND UP",
+    "PIQUE",
+    "KALEIDOSCOPE",
+    "HUMIDIFIER",
+    "BACKPACK"
+  ],
+  "fetched_at": "2026-10-26T07:10:02.716Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-02.json"
+}
