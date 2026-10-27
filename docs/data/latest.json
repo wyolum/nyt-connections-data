@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "tiles": [
-    "WELCOME",
-    "HALLOWEEK",
-    "CHILLING",
-    "TOY",
-    "YOGA",
-    "JAWN",
-    "SPORTING",
-    "PRAYER",
-    "PSYCHS",
-    "HOUND",
-    "MANAGING",
-    "WRESTLING",
-    "SAME OLD",
-    "HOSTED",
-    "HERDING",
-    "NOT BAD"
+    "TACO",
+    "PEPPER",
+    "DRUM",
+    "JAR",
+    "TINKER",
+    "TOWER",
+    "FIDDLE",
+    "JINGLE",
+    "LIBERTY",
+    "CANAL",
+    "TRIFLE",
+    "DIVING",
+    "ANVIL",
+    "BOTTOMS",
+    "STIRRUP",
+    "MEDDLE"
   ],
-  "fetched_at": "2026-10-26T07:10:01.522Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-26.json"
+  "fetched_at": "2026-10-27T07:10:01.948Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-27.json"
 }

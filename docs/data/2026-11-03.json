@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-03",
+  "tiles": [
+    "CARRY ON",
+    "CHECK",
+    "ROLLER BAG",
+    "INTERVIEW",
+    "RESUME",
+    "PROFILE",
+    "OFFICE CHAIR",
+    "FOOD",
+    "MENU",
+    "SHOPPING CART",
+    "CREDIT",
+    "CONTINUE",
+    "WHELP",
+    "TAP WATER",
+    "PROCEED",
+    "STROLLER"
+  ],
+  "fetched_at": "2026-10-27T07:10:03.472Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-03.json"
+}
