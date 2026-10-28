@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-04",
+  "tiles": [
+    "FLY",
+    "POKE",
+    "IRON",
+    "WORKS",
+    "WOOD",
+    "WRING",
+    "WEDGE",
+    "BLEACH",
+    "PUTTER",
+    "CRACKER",
+    "DOORSTOP",
+    "LOLL",
+    "FLATIRON BUILDING",
+    "SHUFFLE",
+    "TUMBLE DRY",
+    "PIE SLICE"
+  ],
+  "fetched_at": "2026-10-28T07:10:05.457Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-04.json"
+}

@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "tiles": [
-    "TACO",
-    "PEPPER",
-    "DRUM",
-    "JAR",
-    "TINKER",
-    "TOWER",
-    "FIDDLE",
-    "JINGLE",
-    "LIBERTY",
-    "CANAL",
-    "TRIFLE",
-    "DIVING",
-    "ANVIL",
-    "BOTTOMS",
-    "STIRRUP",
-    "MEDDLE"
+    "CURIOSITY",
+    "ROUT",
+    "SUBJECT",
+    "ATTRACTION",
+    "ATTACHMENT",
+    "SPIRIT",
+    "BODY",
+    "COARSE",
+    "CRUSH",
+    "WEIGH",
+    "SIGNATURE",
+    "INTEREST",
+    "RODE",
+    "OPPORTUNITY",
+    "FEELINGS",
+    "PERSEVERANCE"
   ],
-  "fetched_at": "2026-10-27T07:10:01.948Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-27.json"
+  "fetched_at": "2026-10-28T07:10:02.246Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-28.json"
 }
