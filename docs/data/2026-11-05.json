@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-05",
+  "tiles": [
+    "RAINDROP",
+    "ROSE",
+    "WHISKER",
+    "KITTEN",
+    "GIG",
+    "PEAR",
+    "SPIKE",
+    "NARCISSUS",
+    "WEDGE",
+    "RUN",
+    "LOTUS",
+    "UVULA",
+    "BRANDO",
+    "ANEMONE",
+    "SPEEDBAG",
+    "PLATFORM"
+  ],
+  "fetched_at": "2026-10-29T07:10:03.049Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-05.json"
+}
