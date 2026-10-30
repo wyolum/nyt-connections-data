@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-06",
+  "tiles": [
+    "BACKUP",
+    "PICKUP",
+    "MAKEUP",
+    "HOT ROD",
+    "FLATBED",
+    "FABRIC",
+    "EXTRA",
+    "WOOLENS",
+    "TRAFFIC CONE",
+    "SEMI",
+    "CONSTITUTION",
+    "REPLACEMENT",
+    "SPARE",
+    "OSIRIS",
+    "STRUCTURE",
+    "TANKER"
+  ],
+  "fetched_at": "2026-10-30T07:10:03.017Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-06.json"
+}

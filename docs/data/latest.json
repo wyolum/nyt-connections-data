@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "tiles": [
-    "TUXEDO",
-    "TRAFFIC LIGHT",
-    "ROMAN",
-    "EMPEROR",
-    "PARKING METER",
-    "CANDY CORN",
-    "NEAPOLITAN",
-    "PIGGY BANK",
-    "TYPEWRITER",
-    "WISHING WELL",
-    "GOTHIC",
-    "ANTARCTICA",
-    "CALICO",
-    "WADDLE",
-    "SANS",
-    "PAYPHONE"
+    "DEMON",
+    "PIT",
+    "HANDS",
+    "WINGS",
+    "SHUTTER",
+    "GLUM",
+    "CURTAIN",
+    "SHADE",
+    "DRAPE",
+    "FLASH",
+    "RUG",
+    "GRANGE",
+    "LENS",
+    "PILLOW",
+    "BACKDROP",
+    "VIEWFINDER"
   ],
-  "fetched_at": "2026-10-29T07:10:01.634Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-29.json"
+  "fetched_at": "2026-10-30T07:10:01.297Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-30.json"
 }
