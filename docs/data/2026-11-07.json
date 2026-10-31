@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07",
+  "tiles": [
+    "POLO",
+    "EASTER",
+    "NEW",
+    "CLONE",
+    "RHODE",
+    "RINGER",
+    "SOON",
+    "TREASURE",
+    "HENLEY",
+    "BOUNTY",
+    "NORTH",
+    "CANE",
+    "SPOILS",
+    "SOUTH",
+    "RAGLAN",
+    "BOOTY"
+  ],
+  "fetched_at": "2026-10-31T07:10:03.063Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-07.json"
+}

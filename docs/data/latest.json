@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "tiles": [
-    "DEMON",
-    "PIT",
-    "HANDS",
-    "WINGS",
-    "SHUTTER",
-    "GLUM",
-    "CURTAIN",
-    "SHADE",
-    "DRAPE",
-    "FLASH",
-    "RUG",
-    "GRANGE",
-    "LENS",
-    "PILLOW",
-    "BACKDROP",
-    "VIEWFINDER"
+    "STAYCATION",
+    "GUITAR",
+    "DIRTY",
+    "KILLER",
+    "SICK",
+    "DOWNFALL",
+    "SHAKEN",
+    "UP",
+    "TENNIS RACKET",
+    "SHAKESPEARE",
+    "WICKED",
+    "TASSEL",
+    "SITCOM",
+    "MARIONETTE",
+    "DRY",
+    "GNARLY"
   ],
-  "fetched_at": "2026-10-30T07:10:01.297Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-30.json"
+  "fetched_at": "2026-10-31T07:10:01.561Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-31.json"
 }
