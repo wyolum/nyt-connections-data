@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-08",
+  "tiles": [
+    "CUT",
+    "LEAK",
+    "CONTEXT",
+    "CARAT",
+    "BUILT",
+    "BLOWOUT",
+    "CLARITY",
+    "CHARRED",
+    "COLOR",
+    "KORN",
+    "INSIGHT",
+    "EXTENSIONS",
+    "RIPPED",
+    "TRIM",
+    "JACKED",
+    "PERSPECTIVE"
+  ],
+  "fetched_at": "2026-11-01T08:10:03.088Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-08.json"
+}

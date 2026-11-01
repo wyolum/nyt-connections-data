@@ -1,23 +1,23 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "tiles": [
-    "STAYCATION",
-    "GUITAR",
-    "DIRTY",
-    "KILLER",
-    "SICK",
-    "DOWNFALL",
-    "SHAKEN",
-    "UP",
-    "TENNIS RACKET",
-    "SHAKESPEARE",
-    "WICKED",
-    "TASSEL",
-    "SITCOM",
-    "MARIONETTE",
-    "DRY",
-    "GNARLY"
+    "HEAD",
+    "TRIPPING",
+    "CANINE",
+    "LOVER",
+    "DOGGY",
+    "SELF",
+    "MATURATED",
+    "PUPPY",
+    "HOUND",
+    "INCISOR",
+    "BROTHERLY",
+    "BICUSPID",
+    "UNREQUITED",
+    "TRENCHED",
+    "MOLAR",
+    "FIEND"
   ],
-  "fetched_at": "2026-10-31T07:10:01.561Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-10-31.json"
+  "fetched_at": "2026-11-01T08:10:01.859Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-01.json"
 }
