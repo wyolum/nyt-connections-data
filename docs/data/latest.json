@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "tiles": [
-    "HEAD",
-    "TRIPPING",
-    "CANINE",
-    "LOVER",
-    "DOGGY",
-    "SELF",
-    "MATURATED",
-    "PUPPY",
-    "HOUND",
-    "INCISOR",
-    "BROTHERLY",
-    "BICUSPID",
-    "UNREQUITED",
-    "TRENCHED",
-    "MOLAR",
-    "FIEND"
+    "MEDICINE CABINET",
+    "COMPASS",
+    "FOG MACHINE",
+    "INCENSE",
+    "WATERFALL",
+    "DISCO BALL",
+    "NETTLE",
+    "HIKING BOOTS",
+    "DRESSING ROOM",
+    "DRY ICE",
+    "WATER BOTTLE",
+    "WIND UP",
+    "PIQUE",
+    "KALEIDOSCOPE",
+    "HUMIDIFIER",
+    "BACKPACK"
   ],
-  "fetched_at": "2026-11-01T08:10:01.859Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-01.json"
+  "fetched_at": "2026-11-02T08:10:01.403Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-02.json"
 }
