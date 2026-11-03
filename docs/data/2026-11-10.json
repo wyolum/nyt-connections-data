@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-10",
+  "tiles": [
+    "ABRACADABRA",
+    "ONOMATOPOEIA",
+    "APOTHECARY",
+    "FOOFARAW",
+    "OXYMORON",
+    "PROTOZOOLOGY",
+    "HULLABALOO",
+    "HABERDASHER",
+    "BEEKEEPER",
+    "SCRIVENER",
+    "HYPERBOLE",
+    "BROUHAHA",
+    "WAINWRIGHT",
+    "KERFUFFLE",
+    "INVISIBILITY",
+    "METONYMY"
+  ],
+  "fetched_at": "2026-11-03T08:10:05.856Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-10.json"
+}
