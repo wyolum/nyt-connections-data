@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "tiles": [
-    "CARRY ON",
-    "CHECK",
-    "ROLLER BAG",
-    "INTERVIEW",
-    "RESUME",
-    "PROFILE",
-    "OFFICE CHAIR",
-    "FOOD",
-    "MENU",
-    "SHOPPING CART",
-    "CREDIT",
-    "CONTINUE",
-    "WHELP",
-    "TAP WATER",
-    "PROCEED",
-    "STROLLER"
+    "FLY",
+    "POKE",
+    "IRON",
+    "WORKS",
+    "WOOD",
+    "WRING",
+    "WEDGE",
+    "BLEACH",
+    "PUTTER",
+    "CRACKER",
+    "DOORSTOP",
+    "LOLL",
+    "FLATIRON BUILDING",
+    "SHUFFLE",
+    "TUMBLE DRY",
+    "PIE SLICE"
   ],
-  "fetched_at": "2026-11-03T08:10:04.739Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-03.json"
+  "fetched_at": "2026-11-04T08:10:02.258Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-04.json"
 }
