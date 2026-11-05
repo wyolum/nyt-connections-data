@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "tiles": [
-    "FLY",
-    "POKE",
-    "IRON",
-    "WORKS",
-    "WOOD",
-    "WRING",
+    "RAINDROP",
+    "ROSE",
+    "WHISKER",
+    "KITTEN",
+    "GIG",
+    "PEAR",
+    "SPIKE",
+    "NARCISSUS",
     "WEDGE",
-    "BLEACH",
-    "PUTTER",
-    "CRACKER",
-    "DOORSTOP",
-    "LOLL",
-    "FLATIRON BUILDING",
-    "SHUFFLE",
-    "TUMBLE DRY",
-    "PIE SLICE"
+    "RUN",
+    "LOTUS",
+    "UVULA",
+    "BRANDO",
+    "ANEMONE",
+    "SPEEDBAG",
+    "PLATFORM"
   ],
-  "fetched_at": "2026-11-04T08:10:02.258Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-04.json"
+  "fetched_at": "2026-11-05T08:10:01.504Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-05.json"
 }

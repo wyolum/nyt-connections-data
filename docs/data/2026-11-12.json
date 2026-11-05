@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-12",
+  "tiles": [
+    "GREAT SCOTT",
+    "ROCKY ROAD",
+    "YOU'RE TOAST",
+    "FLUX CAPACITOR",
+    "MOONLIGHT SONATA",
+    "JIMINY CRICKET",
+    "MARTY MCFLY",
+    "COMEDY ROAST",
+    "DOC BROWN",
+    "CHANGE PURSE",
+    "ARCTIC CHAR",
+    "GOOD HEAVENS",
+    "SHIFT DRESS",
+    "GLADIATOR SANDALS",
+    "HOLY SMOKES",
+    "SWING SET"
+  ],
+  "fetched_at": "2026-11-05T08:10:02.718Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-12.json"
+}
