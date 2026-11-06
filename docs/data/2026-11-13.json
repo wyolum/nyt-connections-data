@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-13",
+  "tiles": [
+    "PRESS",
+    "BARGE",
+    "SCROLL",
+    "WATER SKIER",
+    "SURF",
+    "TEASER",
+    "WAVES",
+    "TRAILER",
+    "TRUST",
+    "EXPOSURE",
+    "SEARCH",
+    "FREEZE",
+    "COVERAGE",
+    "GLIDER",
+    "PUBLICITY",
+    "BROWSE"
+  ],
+  "fetched_at": "2026-11-06T08:10:05.270Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-13.json"
+}

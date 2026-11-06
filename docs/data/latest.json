@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "tiles": [
-    "RAINDROP",
-    "ROSE",
-    "WHISKER",
-    "KITTEN",
-    "GIG",
-    "PEAR",
-    "SPIKE",
-    "NARCISSUS",
-    "WEDGE",
-    "RUN",
-    "LOTUS",
-    "UVULA",
-    "BRANDO",
-    "ANEMONE",
-    "SPEEDBAG",
-    "PLATFORM"
+    "BACKUP",
+    "PICKUP",
+    "MAKEUP",
+    "HOT ROD",
+    "FLATBED",
+    "FABRIC",
+    "EXTRA",
+    "WOOLENS",
+    "TRAFFIC CONE",
+    "SEMI",
+    "CONSTITUTION",
+    "REPLACEMENT",
+    "SPARE",
+    "OSIRIS",
+    "STRUCTURE",
+    "TANKER"
   ],
-  "fetched_at": "2026-11-05T08:10:01.504Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-05.json"
+  "fetched_at": "2026-11-06T08:10:03.916Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-06.json"
 }
