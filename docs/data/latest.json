@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "tiles": [
-    "BACKUP",
-    "PICKUP",
-    "MAKEUP",
-    "HOT ROD",
-    "FLATBED",
-    "FABRIC",
-    "EXTRA",
-    "WOOLENS",
-    "TRAFFIC CONE",
-    "SEMI",
-    "CONSTITUTION",
-    "REPLACEMENT",
-    "SPARE",
-    "OSIRIS",
-    "STRUCTURE",
-    "TANKER"
+    "POLO",
+    "EASTER",
+    "NEW",
+    "CLONE",
+    "RHODE",
+    "RINGER",
+    "SOON",
+    "TREASURE",
+    "HENLEY",
+    "BOUNTY",
+    "NORTH",
+    "CANE",
+    "SPOILS",
+    "SOUTH",
+    "RAGLAN",
+    "BOOTY"
   ],
-  "fetched_at": "2026-11-06T08:10:03.916Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-06.json"
+  "fetched_at": "2026-11-07T08:10:05.256Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-07.json"
 }

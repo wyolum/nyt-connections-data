@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-14",
+  "tiles": [
+    "COMPLEX",
+    "CHESS",
+    "BATTLE",
+    "ADVANCED",
+    "MARRIAGE",
+    "PROGRESSIVE",
+    "CENTER",
+    "MOTTLE",
+    "GO",
+    "FACILITY",
+    "MODERN",
+    "OTHELLO",
+    "TRIB",
+    "STRATEGO",
+    "CAMPUS",
+    "FOREMOST"
+  ],
+  "fetched_at": "2026-11-07T08:10:06.520Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-14.json"
+}
