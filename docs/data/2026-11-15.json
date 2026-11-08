@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-15",
+  "tiles": [
+    "JET",
+    "TRAVEL",
+    "SLEEK",
+    "RECORD",
+    "REGISTRY",
+    "ARCHIVE",
+    "INCLINED",
+    "DRESS CODE",
+    "RAPSCALLION",
+    "ALL-TIME",
+    "RSVP",
+    "CARTESIAN",
+    "HISTORIC",
+    "ASTRAL",
+    "OCTONION",
+    "UNPRECEDENTED"
+  ],
+  "fetched_at": "2026-11-08T08:10:06.540Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-15.json"
+}
