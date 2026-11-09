@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "tiles": [
-    "CUT",
-    "LEAK",
-    "CONTEXT",
-    "CARAT",
-    "BUILT",
-    "BLOWOUT",
-    "CLARITY",
-    "CHARRED",
-    "COLOR",
-    "KORN",
-    "INSIGHT",
-    "EXTENSIONS",
-    "RIPPED",
-    "TRIM",
-    "JACKED",
-    "PERSPECTIVE"
+    "STEAK KNIFE",
+    "CARD SHARK",
+    "CON JOB",
+    "BOOTCUT",
+    "NAVY SEAL",
+    "SHELL GAME",
+    "MINT LEAF",
+    "GAMMA RAY",
+    "TAPE DISPENSER",
+    "LOW-RISE",
+    "FUN SPONGE",
+    "RIP-OFF",
+    "SKINNY",
+    "FLIMFLAM",
+    "GRAPEFRUIT SPOON",
+    "DISTRESSED"
   ],
-  "fetched_at": "2026-11-08T08:10:04.722Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-08.json"
+  "fetched_at": "2026-11-09T08:10:01.250Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-09.json"
 }

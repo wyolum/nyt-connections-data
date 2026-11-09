@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "tiles": [
+    "IN LOVE",
+    "WONDERLAND",
+    "WATER",
+    "MELON",
+    "ONION",
+    "BLOCKBUSTER",
+    "GARDEN",
+    "FOLIAGE",
+    "SAUSAGE",
+    "GLOVES",
+    "ASLEEP",
+    "CHICKEN",
+    "CLEANING",
+    "CAMP",
+    "GUY",
+    "SCHOOL"
+  ],
+  "fetched_at": "2026-11-09T08:10:02.515Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-16.json"
+}
