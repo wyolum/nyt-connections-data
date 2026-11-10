@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "tiles": [
-    "STEAK KNIFE",
-    "CARD SHARK",
-    "CON JOB",
-    "BOOTCUT",
-    "NAVY SEAL",
-    "SHELL GAME",
-    "MINT LEAF",
-    "GAMMA RAY",
-    "TAPE DISPENSER",
-    "LOW-RISE",
-    "FUN SPONGE",
-    "RIP-OFF",
-    "SKINNY",
-    "FLIMFLAM",
-    "GRAPEFRUIT SPOON",
-    "DISTRESSED"
+    "ABRACADABRA",
+    "ONOMATOPOEIA",
+    "APOTHECARY",
+    "FOOFARAW",
+    "OXYMORON",
+    "PROTOZOOLOGY",
+    "HULLABALOO",
+    "HABERDASHER",
+    "BEEKEEPER",
+    "SCRIVENER",
+    "HYPERBOLE",
+    "BROUHAHA",
+    "WAINWRIGHT",
+    "KERFUFFLE",
+    "INVISIBILITY",
+    "METONYMY"
   ],
-  "fetched_at": "2026-11-09T08:10:01.250Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-09.json"
+  "fetched_at": "2026-11-10T08:10:02.528Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-10.json"
 }

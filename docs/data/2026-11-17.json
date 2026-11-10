@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-17",
+  "tiles": [
+    "KINGPIN",
+    "BLACKBIRD",
+    "FLOCK",
+    "AIRPLANE",
+    "COME TOGETHER",
+    "THEM",
+    "PIE",
+    "VALLEY",
+    "PENNY LANE",
+    "RYE",
+    "HELP",
+    "GATHER",
+    "SHAZAM",
+    "MASKED BALL",
+    "ASSEMBLE",
+    "SIXPENCE"
+  ],
+  "fetched_at": "2026-11-10T08:10:03.739Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-17.json"
+}
