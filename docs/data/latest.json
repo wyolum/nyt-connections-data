@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "tiles": [
-    "ABRACADABRA",
-    "ONOMATOPOEIA",
-    "APOTHECARY",
-    "FOOFARAW",
-    "OXYMORON",
-    "PROTOZOOLOGY",
-    "HULLABALOO",
-    "HABERDASHER",
-    "BEEKEEPER",
-    "SCRIVENER",
-    "HYPERBOLE",
-    "BROUHAHA",
-    "WAINWRIGHT",
-    "KERFUFFLE",
-    "INVISIBILITY",
-    "METONYMY"
+    "SHREDDER",
+    "HERBAL",
+    "PATOOT",
+    "WHOOPIE CUSHION",
+    "GREEN",
+    "FOLK",
+    "BUBBLE",
+    "ROUGH",
+    "AFTERNOON",
+    "RHEOSTATS",
+    "TRADITIONAL",
+    "TIRE",
+    "SAND TRAP",
+    "HOLISTIC",
+    "AIR MATTRESS",
+    "TEE BOX"
   ],
-  "fetched_at": "2026-11-10T08:10:02.528Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-10.json"
+  "fetched_at": "2026-11-11T08:10:03.703Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-11.json"
 }

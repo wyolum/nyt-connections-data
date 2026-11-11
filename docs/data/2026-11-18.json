@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-18",
+  "tiles": [
+    "NICE",
+    "HONEY",
+    "DEEP",
+    "YELLOW",
+    "SMALL",
+    "JUICY",
+    "DIJON",
+    "COMB",
+    "FRENCH",
+    "TOURS",
+    "BUZZ",
+    "VOCAL",
+    "SOUR",
+    "VENOM",
+    "OVOID",
+    "CANNES"
+  ],
+  "fetched_at": "2026-11-11T08:10:04.995Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-18.json"
+}
