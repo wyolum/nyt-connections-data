@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-19",
+  "tiles": [
+    "UNDERGROUND",
+    "TUNNEL",
+    "CORD",
+    "CORK",
+    "SWITCH",
+    "EINSTEIN",
+    "HOTSHOT",
+    "BORE",
+    "SAP",
+    "PLUG",
+    "WOOD",
+    "HOUSING",
+    "DIG",
+    "GALANGAL",
+    "RESIN",
+    "BURROW"
+  ],
+  "fetched_at": "2026-11-12T08:10:04.768Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-19.json"
+}

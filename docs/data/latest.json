@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "tiles": [
-    "SHREDDER",
-    "HERBAL",
-    "PATOOT",
-    "WHOOPIE CUSHION",
-    "GREEN",
-    "FOLK",
-    "BUBBLE",
-    "ROUGH",
-    "AFTERNOON",
-    "RHEOSTATS",
-    "TRADITIONAL",
-    "TIRE",
-    "SAND TRAP",
-    "HOLISTIC",
-    "AIR MATTRESS",
-    "TEE BOX"
+    "GREAT SCOTT",
+    "ROCKY ROAD",
+    "YOU'RE TOAST",
+    "FLUX CAPACITOR",
+    "MOONLIGHT SONATA",
+    "JIMINY CRICKET",
+    "MARTY MCFLY",
+    "COMEDY ROAST",
+    "DOC BROWN",
+    "CHANGE PURSE",
+    "ARCTIC CHAR",
+    "GOOD HEAVENS",
+    "SHIFT DRESS",
+    "GLADIATOR SANDALS",
+    "HOLY SMOKES",
+    "SWING SET"
   ],
-  "fetched_at": "2026-11-11T08:10:03.703Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-11.json"
+  "fetched_at": "2026-11-12T08:10:03.497Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-12.json"
 }
