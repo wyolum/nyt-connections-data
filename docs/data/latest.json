@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "tiles": [
-    "GREAT SCOTT",
-    "ROCKY ROAD",
-    "YOU'RE TOAST",
-    "FLUX CAPACITOR",
-    "MOONLIGHT SONATA",
-    "JIMINY CRICKET",
-    "MARTY MCFLY",
-    "COMEDY ROAST",
-    "DOC BROWN",
-    "CHANGE PURSE",
-    "ARCTIC CHAR",
-    "GOOD HEAVENS",
-    "SHIFT DRESS",
-    "GLADIATOR SANDALS",
-    "HOLY SMOKES",
-    "SWING SET"
+    "PRESS",
+    "BARGE",
+    "SCROLL",
+    "WATER SKIER",
+    "SURF",
+    "TEASER",
+    "WAVES",
+    "TRAILER",
+    "TRUST",
+    "EXPOSURE",
+    "SEARCH",
+    "FREEZE",
+    "COVERAGE",
+    "GLIDER",
+    "PUBLICITY",
+    "BROWSE"
   ],
-  "fetched_at": "2026-11-12T08:10:03.497Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-12.json"
+  "fetched_at": "2026-11-13T08:10:01.846Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-13.json"
 }

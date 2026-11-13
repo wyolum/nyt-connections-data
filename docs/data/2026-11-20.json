@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-20",
+  "tiles": [
+    "BEAST",
+    "SPOT",
+    "CANDELABRA",
+    "TOY",
+    "TEACUP",
+    "COWSLIP",
+    "POCKET",
+    "CLOCK",
+    "REGISTER",
+    "DIPHTHONG",
+    "WIZARD",
+    "CATCH",
+    "MINIATURE",
+    "ACE",
+    "STUTTGARTER",
+    "MAVEN"
+  ],
+  "fetched_at": "2026-11-13T08:10:03.203Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-20.json"
+}
