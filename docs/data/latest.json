@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "tiles": [
-    "PRESS",
-    "BARGE",
-    "SCROLL",
-    "WATER SKIER",
-    "SURF",
-    "TEASER",
-    "WAVES",
-    "TRAILER",
-    "TRUST",
-    "EXPOSURE",
-    "SEARCH",
-    "FREEZE",
-    "COVERAGE",
-    "GLIDER",
-    "PUBLICITY",
-    "BROWSE"
+    "COMPLEX",
+    "CHESS",
+    "BATTLE",
+    "ADVANCED",
+    "MARRIAGE",
+    "PROGRESSIVE",
+    "CENTER",
+    "MOTTLE",
+    "GO",
+    "FACILITY",
+    "MODERN",
+    "OTHELLO",
+    "TRIB",
+    "STRATEGO",
+    "CAMPUS",
+    "FOREMOST"
   ],
-  "fetched_at": "2026-11-13T08:10:01.846Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-13.json"
+  "fetched_at": "2026-11-14T08:10:02.806Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-14.json"
 }
