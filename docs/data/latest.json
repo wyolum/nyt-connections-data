@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "tiles": [
-    "COMPLEX",
-    "CHESS",
-    "BATTLE",
-    "ADVANCED",
-    "MARRIAGE",
-    "PROGRESSIVE",
-    "CENTER",
-    "MOTTLE",
-    "GO",
-    "FACILITY",
-    "MODERN",
-    "OTHELLO",
-    "TRIB",
-    "STRATEGO",
-    "CAMPUS",
-    "FOREMOST"
+    "JET",
+    "TRAVEL",
+    "SLEEK",
+    "RECORD",
+    "REGISTRY",
+    "ARCHIVE",
+    "INCLINED",
+    "DRESS CODE",
+    "RAPSCALLION",
+    "ALL-TIME",
+    "RSVP",
+    "CARTESIAN",
+    "HISTORIC",
+    "ASTRAL",
+    "OCTONION",
+    "UNPRECEDENTED"
   ],
-  "fetched_at": "2026-11-14T08:10:02.806Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-14.json"
+  "fetched_at": "2026-11-15T08:10:01.690Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-15.json"
 }

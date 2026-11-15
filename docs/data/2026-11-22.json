@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-22",
+  "tiles": [
+    "EYE",
+    "WHY",
+    "TEA",
+    "HEE",
+    "GEE",
+    "SEA",
+    "SAY",
+    "WEE",
+    "EWE",
+    "SLEW",
+    "WELL",
+    "GUM",
+    "BATH",
+    "HOST",
+    "WRAP",
+    "MASS"
+  ],
+  "fetched_at": "2026-11-15T08:10:02.948Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-22.json"
+}
