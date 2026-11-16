@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "tiles": [
-    "JET",
-    "TRAVEL",
-    "SLEEK",
-    "RECORD",
-    "REGISTRY",
-    "ARCHIVE",
-    "INCLINED",
-    "DRESS CODE",
-    "RAPSCALLION",
-    "ALL-TIME",
-    "RSVP",
-    "CARTESIAN",
-    "HISTORIC",
-    "ASTRAL",
-    "OCTONION",
-    "UNPRECEDENTED"
+    "IN LOVE",
+    "WONDERLAND",
+    "WATER",
+    "MELON",
+    "ONION",
+    "BLOCKBUSTER",
+    "GARDEN",
+    "FOLIAGE",
+    "SAUSAGE",
+    "GLOVES",
+    "ASLEEP",
+    "CHICKEN",
+    "CLEANING",
+    "CAMP",
+    "GUY",
+    "SCHOOL"
   ],
-  "fetched_at": "2026-11-15T08:10:01.690Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-15.json"
+  "fetched_at": "2026-11-16T08:10:01.129Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-16.json"
 }
