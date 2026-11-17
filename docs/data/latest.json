@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "tiles": [
-    "IN LOVE",
-    "WONDERLAND",
-    "WATER",
-    "MELON",
-    "ONION",
-    "BLOCKBUSTER",
-    "GARDEN",
-    "FOLIAGE",
-    "SAUSAGE",
-    "GLOVES",
-    "ASLEEP",
-    "CHICKEN",
-    "CLEANING",
-    "CAMP",
-    "GUY",
-    "SCHOOL"
+    "KINGPIN",
+    "BLACKBIRD",
+    "FLOCK",
+    "AIRPLANE",
+    "COME TOGETHER",
+    "THEM",
+    "PIE",
+    "VALLEY",
+    "PENNY LANE",
+    "RYE",
+    "HELP",
+    "GATHER",
+    "SHAZAM",
+    "MASKED BALL",
+    "ASSEMBLE",
+    "SIXPENCE"
   ],
-  "fetched_at": "2026-11-16T08:10:01.129Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-16.json"
+  "fetched_at": "2026-11-17T08:10:06.578Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-17.json"
 }

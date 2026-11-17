@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-24",
+  "tiles": [
+    "PLAYGROUND",
+    "PAPER FAN",
+    "BIG BOX STORE",
+    "CRATER",
+    "ACCORDION",
+    "MOUNTAIN",
+    "TROMBONE",
+    "LINK",
+    "TANK",
+    "CUPCAKE LINER",
+    "AMINO ACID",
+    "MICROSCOPE",
+    "FIREPLACE BELLOWS",
+    "NOSEDIVE",
+    "POWERPOINT DECK",
+    "BOTTOM OUT"
+  ],
+  "fetched_at": "2026-11-17T08:10:07.815Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-24.json"
+}
