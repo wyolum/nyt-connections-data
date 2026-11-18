@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-25",
+  "tiles": [
+    "EAGLE",
+    "PILE",
+    "HALF-PIPE",
+    "DIMENSIONS",
+    "OLLIE",
+    "SHOULDER",
+    "WEAVE",
+    "NECK PILLOW",
+    "RAMP",
+    "PARABOLA",
+    "OODLE",
+    "MEDIAN",
+    "HORSESHOE",
+    "MATERIAL",
+    "LANE",
+    "OBERMAN"
+  ],
+  "fetched_at": "2026-11-18T08:10:07.279Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-25.json"
+}
