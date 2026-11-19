@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-26",
+  "tiles": [
+    "BEER",
+    "BOTTLE OF CHAMPAGNE",
+    "BUBBLEGUM",
+    "BOWLING",
+    "POPCORN",
+    "CARNATION",
+    "WHEELIE",
+    "DONUTS",
+    "BLUSH",
+    "COMPACT",
+    "TELEVISION",
+    "MANUAL",
+    "HYBRID",
+    "CORAL",
+    "THE QUESTION",
+    "CONVERTIBLE"
+  ],
+  "fetched_at": "2026-11-19T08:10:02.607Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-26.json"
+}

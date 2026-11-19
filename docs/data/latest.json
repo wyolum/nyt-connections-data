@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "tiles": [
-    "NICE",
-    "HONEY",
-    "DEEP",
-    "YELLOW",
-    "SMALL",
-    "JUICY",
-    "DIJON",
-    "COMB",
-    "FRENCH",
-    "TOURS",
-    "BUZZ",
-    "VOCAL",
-    "SOUR",
-    "VENOM",
-    "OVOID",
-    "CANNES"
+    "UNDERGROUND",
+    "TUNNEL",
+    "CORD",
+    "CORK",
+    "SWITCH",
+    "EINSTEIN",
+    "HOTSHOT",
+    "BORE",
+    "SAP",
+    "PLUG",
+    "WOOD",
+    "HOUSING",
+    "DIG",
+    "GALANGAL",
+    "RESIN",
+    "BURROW"
   ],
-  "fetched_at": "2026-11-18T08:10:05.999Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-18.json"
+  "fetched_at": "2026-11-19T08:10:01.327Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-19.json"
 }
