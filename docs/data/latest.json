@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "tiles": [
-    "UNDERGROUND",
-    "TUNNEL",
-    "CORD",
-    "CORK",
-    "SWITCH",
-    "EINSTEIN",
-    "HOTSHOT",
-    "BORE",
-    "SAP",
-    "PLUG",
-    "WOOD",
-    "HOUSING",
-    "DIG",
-    "GALANGAL",
-    "RESIN",
-    "BURROW"
+    "BEAST",
+    "SPOT",
+    "CANDELABRA",
+    "TOY",
+    "TEACUP",
+    "COWSLIP",
+    "POCKET",
+    "CLOCK",
+    "REGISTER",
+    "DIPHTHONG",
+    "WIZARD",
+    "CATCH",
+    "MINIATURE",
+    "ACE",
+    "STUTTGARTER",
+    "MAVEN"
   ],
-  "fetched_at": "2026-11-19T08:10:01.327Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-19.json"
+  "fetched_at": "2026-11-20T08:10:01.750Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-20.json"
 }
