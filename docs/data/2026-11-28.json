@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-28",
+  "tiles": [
+    "FOOD",
+    "FUDGE",
+    "CHERRY",
+    "HEM",
+    "DARN",
+    "SKIRT",
+    "NUTS",
+    "BAR",
+    "MUSIC",
+    "BELL",
+    "MATE",
+    "BORDER",
+    "BLAST",
+    "PATCH",
+    "RIM",
+    "SEVEN"
+  ],
+  "fetched_at": "2026-11-21T08:10:03.213Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-28.json"
+}
