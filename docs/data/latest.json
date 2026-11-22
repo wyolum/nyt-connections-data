@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "tiles": [
-    "BREATH",
-    "BUTTER",
-    "FOOL",
-    "SATISFACTION",
-    "COURTESY",
-    "HORSES",
-    "OWN",
-    "DEVIL",
-    "SUGAR",
-    "TONGUE",
-    "EMPRESS",
-    "WAIT TIME",
-    "HELPFULNESS",
-    "BLACK AND WHITE",
-    "HIEROPHANT",
-    "GIRL SCOUT"
+    "EYE",
+    "WHY",
+    "TEA",
+    "HEE",
+    "GEE",
+    "SEA",
+    "SAY",
+    "WEE",
+    "EWE",
+    "SLEW",
+    "WELL",
+    "GUM",
+    "BATH",
+    "HOST",
+    "WRAP",
+    "MASS"
   ],
-  "fetched_at": "2026-11-21T08:10:02.058Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-21.json"
+  "fetched_at": "2026-11-22T08:10:01.632Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-22.json"
 }

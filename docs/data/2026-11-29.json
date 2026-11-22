@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-29",
+  "tiles": [
+    "MANTICORE",
+    "BURPEE",
+    "ZOOLOGIST",
+    "GRIFFIN",
+    "FARTHING",
+    "HILL",
+    "BELCHER",
+    "CRUNCH",
+    "MOUNTAIN CLIMBER",
+    "DISAPPOINT",
+    "CENT",
+    "BEAR CRAWL",
+    "SOU",
+    "DEMEANING",
+    "SIMPSON",
+    "PITTANCE"
+  ],
+  "fetched_at": "2026-11-22T08:10:02.841Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-29.json"
+}
