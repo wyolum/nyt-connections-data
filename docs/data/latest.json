@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "tiles": [
-    "EYE",
-    "WHY",
-    "TEA",
-    "HEE",
-    "GEE",
-    "SEA",
-    "SAY",
-    "WEE",
-    "EWE",
-    "SLEW",
-    "WELL",
-    "GUM",
-    "BATH",
-    "HOST",
-    "WRAP",
-    "MASS"
+    "CHICKPEA",
+    "DISTANCE",
+    "LAMBDA",
+    "DOOM",
+    "IOTA",
+    "PUPIL",
+    "BLACK",
+    "ETA",
+    "NU",
+    "SHRED",
+    "THRASH",
+    "TRAFFIC",
+    "PARTICLE",
+    "CUBISM",
+    "ROUTE",
+    "MODICUM"
   ],
-  "fetched_at": "2026-11-22T08:10:01.632Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-22.json"
+  "fetched_at": "2026-11-23T08:10:02.095Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-23.json"
 }

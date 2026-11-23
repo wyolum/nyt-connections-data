@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-30",
+  "tiles": [
+    "SWAN",
+    "BANDIT",
+    "RACCOON",
+    "CITY",
+    "HAWK",
+    "STAGE",
+    "ROBIN",
+    "DUMPSTER",
+    "SPORTS",
+    "MOVE",
+    "SCUBA",
+    "STYLE",
+    "PEDDLE",
+    "OPINION",
+    "ZORRO",
+    "VEND"
+  ],
+  "fetched_at": "2026-11-23T08:10:03.384Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-30.json"
+}
