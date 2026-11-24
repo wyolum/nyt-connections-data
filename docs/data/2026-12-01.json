@@ -1,0 +1,23 @@
+{
+  "date": "2026-12-01",
+  "tiles": [
+    "BEAN",
+    "XL",
+    "TV",
+    "WASHER",
+    "DVR",
+    "CHI",
+    "NME",
+    "SEQUIN",
+    "TINSEL",
+    "NV",
+    "MO",
+    "TABLET",
+    "CD",
+    "QT",
+    "PC",
+    "LP"
+  ],
+  "fetched_at": "2026-11-24T08:10:03.981Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-12-01.json"
+}

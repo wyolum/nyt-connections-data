@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "tiles": [
-    "CHICKPEA",
-    "DISTANCE",
-    "LAMBDA",
-    "DOOM",
-    "IOTA",
-    "PUPIL",
-    "BLACK",
-    "ETA",
-    "NU",
-    "SHRED",
-    "THRASH",
-    "TRAFFIC",
-    "PARTICLE",
-    "CUBISM",
-    "ROUTE",
-    "MODICUM"
+    "PLAYGROUND",
+    "PAPER FAN",
+    "BIG BOX STORE",
+    "CRATER",
+    "ACCORDION",
+    "MOUNTAIN",
+    "TROMBONE",
+    "LINK",
+    "TANK",
+    "CUPCAKE LINER",
+    "AMINO ACID",
+    "MICROSCOPE",
+    "FIREPLACE BELLOWS",
+    "NOSEDIVE",
+    "POWERPOINT DECK",
+    "BOTTOM OUT"
   ],
-  "fetched_at": "2026-11-23T08:10:02.095Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-23.json"
+  "fetched_at": "2026-11-24T08:10:02.592Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-24.json"
 }
