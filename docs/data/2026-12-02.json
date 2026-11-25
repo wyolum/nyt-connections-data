@@ -1,0 +1,23 @@
+{
+  "date": "2026-12-02",
+  "tiles": [
+    "LOTION",
+    "BASKET",
+    "HOSE",
+    "AGAIN",
+    "BALLOON",
+    "PLOTZ",
+    "OVER",
+    "HAMMOCK",
+    "SHED",
+    "TRACTOR",
+    "BURNER",
+    "ANEW",
+    "PARCELLS",
+    "ONCE MORE",
+    "BIRDBATH",
+    "SANDBAGS"
+  ],
+  "fetched_at": "2026-11-25T08:10:04.147Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-12-02.json"
+}

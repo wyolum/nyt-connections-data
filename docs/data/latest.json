@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "tiles": [
-    "PLAYGROUND",
-    "PAPER FAN",
-    "BIG BOX STORE",
-    "CRATER",
-    "ACCORDION",
-    "MOUNTAIN",
-    "TROMBONE",
-    "LINK",
-    "TANK",
-    "CUPCAKE LINER",
-    "AMINO ACID",
-    "MICROSCOPE",
-    "FIREPLACE BELLOWS",
-    "NOSEDIVE",
-    "POWERPOINT DECK",
-    "BOTTOM OUT"
+    "EAGLE",
+    "PILE",
+    "HALF-PIPE",
+    "DIMENSIONS",
+    "OLLIE",
+    "SHOULDER",
+    "WEAVE",
+    "NECK PILLOW",
+    "RAMP",
+    "PARABOLA",
+    "OODLE",
+    "MEDIAN",
+    "HORSESHOE",
+    "MATERIAL",
+    "LANE",
+    "OBERMAN"
   ],
-  "fetched_at": "2026-11-24T08:10:02.592Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-24.json"
+  "fetched_at": "2026-11-25T08:10:02.865Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-25.json"
 }
