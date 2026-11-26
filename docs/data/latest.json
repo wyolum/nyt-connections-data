@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "tiles": [
-    "EAGLE",
-    "PILE",
-    "HALF-PIPE",
-    "DIMENSIONS",
-    "OLLIE",
-    "SHOULDER",
-    "WEAVE",
-    "NECK PILLOW",
-    "RAMP",
-    "PARABOLA",
-    "OODLE",
-    "MEDIAN",
-    "HORSESHOE",
-    "MATERIAL",
-    "LANE",
-    "OBERMAN"
+    "BEER",
+    "BOTTLE OF CHAMPAGNE",
+    "BUBBLEGUM",
+    "BOWLING",
+    "POPCORN",
+    "CARNATION",
+    "WHEELIE",
+    "DONUTS",
+    "BLUSH",
+    "COMPACT",
+    "TELEVISION",
+    "MANUAL",
+    "HYBRID",
+    "CORAL",
+    "THE QUESTION",
+    "CONVERTIBLE"
   ],
-  "fetched_at": "2026-11-25T08:10:02.865Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-25.json"
+  "fetched_at": "2026-11-26T08:10:11.632Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-26.json"
 }
