@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "tiles": [
-    "BEER",
-    "BOTTLE OF CHAMPAGNE",
-    "BUBBLEGUM",
-    "BOWLING",
-    "POPCORN",
-    "CARNATION",
-    "WHEELIE",
-    "DONUTS",
-    "BLUSH",
-    "COMPACT",
-    "TELEVISION",
-    "MANUAL",
-    "HYBRID",
-    "CORAL",
-    "THE QUESTION",
-    "CONVERTIBLE"
+    "ALICE WALKER",
+    "QUEEN",
+    "MISTLETOE",
+    "KISS",
+    "PRINCE",
+    "MONARCH",
+    "BRUSH",
+    "CAMISOLE",
+    "SKIM",
+    "ROYALTY",
+    "VIXEN",
+    "PINWHEEL",
+    "PEAHEN",
+    "GRAZE",
+    "LEOPARDESS",
+    "FLOWERY LANGUAGE"
   ],
-  "fetched_at": "2026-11-26T08:10:11.632Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-26.json"
+  "fetched_at": "2026-11-27T08:10:01.614Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-27.json"
 }
