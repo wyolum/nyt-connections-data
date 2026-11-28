@@ -1,0 +1,23 @@
+{
+  "date": "2026-12-05",
+  "tiles": [
+    "JACK",
+    "LINE",
+    "PORTABLE",
+    "MAC",
+    "POD",
+    "PAD",
+    "COCKPIT",
+    "PHONE",
+    "CUSHION",
+    "BUSTER",
+    "AIRLOCK",
+    "ALABAMA CITY",
+    "CALDER SCULPTURE",
+    "INSULATE",
+    "BUB",
+    "THRUSTER"
+  ],
+  "fetched_at": "2026-11-28T08:10:04.261Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-12-05.json"
+}

@@ -1,23 +1,23 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "tiles": [
-    "ALICE WALKER",
-    "QUEEN",
-    "MISTLETOE",
-    "KISS",
-    "PRINCE",
-    "MONARCH",
-    "BRUSH",
-    "CAMISOLE",
-    "SKIM",
-    "ROYALTY",
-    "VIXEN",
-    "PINWHEEL",
-    "PEAHEN",
-    "GRAZE",
-    "LEOPARDESS",
-    "FLOWERY LANGUAGE"
+    "FOOD",
+    "FUDGE",
+    "CHERRY",
+    "HEM",
+    "DARN",
+    "SKIRT",
+    "NUTS",
+    "BAR",
+    "MUSIC",
+    "BELL",
+    "MATE",
+    "BORDER",
+    "BLAST",
+    "PATCH",
+    "RIM",
+    "SEVEN"
   ],
-  "fetched_at": "2026-11-27T08:10:01.614Z",
-  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-27.json"
+  "fetched_at": "2026-11-28T08:10:03.048Z",
+  "source": "https://www.nytimes.com/svc/connections/v2/2026-11-28.json"
 }
